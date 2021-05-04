@@ -672,8 +672,12 @@ muestra1<-sample(Num_barberos[,1],Nsim*n.seguridad1,replace=T,prob=Num_barberos$
 
 
 ```{r, echo=FALSE}
-length(muestra1)
-summary(muestra1)
+resumen <- summary(muestra1)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra1)))
+
+kable(df, row.names = F, caption = "Resumen de la muestra del experto 1 para el numero de barberos") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 <br>
@@ -693,8 +697,12 @@ muestra2<-sample(Num_barberos[,1],Nsim*n.seguridad2,replace=T,prob=Num_barberos$
 ```
 
 ```{r, echo=FALSE}
-length(muestra2)
-summary(muestra2)
+resumen <- summary(muestra2)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra2)))
+
+kable(df, row.names = F, caption = "Resumen de la muestra del experto 2 para el numero de barberos") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 <br>
@@ -714,8 +722,12 @@ muestra3<-sample(Num_barberos[,1],Nsim*n.seguridad3,replace=T,prob=Num_barberos$
 ```
 
 ```{r, echo=FALSE}
-length(muestra3)
-summary(muestra3)
+resumen <- summary(muestra3)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra3)))
+
+kable(df, row.names = F, caption = "Resumen de la muestra del experto 3 para el numero de barberos") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 
@@ -774,15 +786,16 @@ hist(medias_barberos,xlab='', sub="Número de peluqueros", ylab='Densidad', main
 axis(1, at=seq(min(medias_barberos), max(medias_barberos), by=2500), las=2)
 lines(density(medias_barberos, from=0), lwd=1.5)
 grid()
-
 ```
 
-```{r}
-summary(medias_barberos)
-```
+```{r, echo=FALSE}
+resumen <- summary(medias_barberos)
+desviacion <- sd(medias_barberos)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = c(desviacion), Longuitud = c(length(medias_barberos)))
 
-```{r}
-sd(medias_barberos)
+kable(df, row.names = F, caption = "Resumen para  2 para el numero de barberos") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 
