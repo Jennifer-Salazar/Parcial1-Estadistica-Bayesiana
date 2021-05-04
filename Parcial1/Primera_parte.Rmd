@@ -664,6 +664,7 @@ Se saca una muestra de tamaño 7000 con reemplazo de la información suministrad
 
 ```{r, echo=FALSE}
 #Muestra experto 1
+set.seed(23)
 Nsim <-1000
 n.seguridad1 <- 7
 muestra1<-sample(Num_barberos[,1],Nsim*n.seguridad1,replace=T,prob=Num_barberos$Experto1)
@@ -685,9 +686,15 @@ Se saca una muestra de tamaño 14000 con reemplazo de la información suministra
 
 ```{r, echo=FALSE}
 #Muestra experto 2
+set.seed(23)
 Nsim <-1000
 n.seguridad2 <- 14
 muestra2<-sample(Num_barberos[,1],Nsim*n.seguridad2,replace=T,prob=Num_barberos$Experto2)
+```
+
+```{r, echo=FALSE}
+length(muestra2)
+summary(muestra2)
 ```
 
 <br>
@@ -700,11 +707,16 @@ Se saca una muestra de tamaño 9000 con reemplazo de la información suministrad
 
 ```{r, echo=FALSE}
 #Muestra experto 3
+set.seed(23)
 Nsim <-1000
 n.seguridad3 <- 9
 muestra3<-sample(Num_barberos[,1],Nsim*n.seguridad3,replace=T,prob=Num_barberos$Experto3)
 ```
 
+```{r, echo=FALSE}
+length(muestra3)
+summary(muestra3)
+```
 
 
 ```{r echo=FALSE}
@@ -743,6 +755,7 @@ Por lo tanto se van a tomar 1000 muestras de tamaño 10 de la distribución prom
 
 
 ```{r, echo=FALSE}
+set.seed(23)
 promedio <- sort(unique(c(muestra1,muestra2, muestra3)))
 probabilidades <- prop.table(table(c(muestra1,muestra2, muestra3)))
 N.sim <- 1000
@@ -767,24 +780,25 @@ grid()
 ```{r}
 summary(medias_barberos)
 ```
+
 ```{r}
 sd(medias_barberos)
 ```
 
 
 
-* Se puede notar que se empezo el análisis del número de peluqueros con un rango de 0 a 100 mil, pero mediante esta distribución promedio ya se tiene un rango más cerrado que va de 24000 y 63250 que es el rango en donde se espera que este el número real de peluqueros de la ciudad de Medellín.
+* Se puede notar que se empezo el análisis del número de peluqueros con un rango de 0 a 100 mil, pero mediante esta distribución promedio ya se tiene un rango más cerrado que va de 24750 y 60250 que es el rango en donde se espera que este el número real de peluqueros de la ciudad de Medellín.
 
-* La estimación promedio del número de barberos/peluqueros/estilistas que hay en la ciudad de Medellín es de 42460. (Esta seria la estimación puntual) 
+* La estimación promedio del número de barberos/peluqueros/estilistas que hay en la ciudad de Medellín es de 42430. (Esta seria la estimación puntual) 
 
-* Hay una dispersión de 5770.831 unidades en las estimaciones del número de barberos/peluqeros/estilistas de la ciudad de Medellín.
+* Hay una dispersión de 5785.287 unidades en las estimaciones del número de barberos/peluqeros/estilistas de la ciudad de Medellín.
 
 
 ```{r}
 round(quantile(medias_barberos, prob=c(0.025, 0.975)))
 ```
 
-* Con una probabilidad del 95% el número real de barberos/peluqueros/estilistas que hay en la ciudad de Medellín esta entre 31750 y 53756 personas.
+* Con una probabilidad del 95% el número real de barberos/peluqueros/estilistas que hay en la ciudad de Medellín esta entre 31250 y 53750 personas.
 
 
 <br>
@@ -906,9 +920,16 @@ Se saca una muestra de tamaño 7000 con reemplazo de la información suministrad
 
 ```{r, echo=FALSE}
 #Muestra experto 1
+set.seed(23)
 Nsim <-1000
 n.seguridad1 <- 7
 muestra1<-sample(Num_clientes[,1],Nsim*n.seguridad1,replace=T,prob=Num_clientes$Experto1)
+```
+
+
+```{r, echo=FALSE}
+length(muestra1)
+summary(muestra1)
 ```
 
 <br>
@@ -919,11 +940,17 @@ Se saca una muestra de tamaño 14000 con reemplazo de la información suministra
 
 ```{r, echo=FALSE}
 #Muestra experto 2
+set.seed(23)
 Nsim <-1000
 n.seguridad2 <- 14
 muestra2<-sample(Num_clientes[,1],Nsim*n.seguridad2,replace=T,prob=Num_clientes$Experto2)
 ```
 
+
+```{r, echo=FALSE}
+length(muestra2)
+summary(muestra2)
+```
 <br>
 
 **Experto 3**
@@ -932,9 +959,16 @@ Se saca una muestra de tamaño 9000 con reemplazo de la información suministrad
 
 ```{r, echo=FALSE}
 #Muestra experto 1
+set.seed(23)
 Nsim <-1000
 n.seguridad3 <- 9
 muestra3<-sample(Num_clientes[,1],Nsim*n.seguridad3,replace=T,prob=Num_clientes$Experto3)
+```
+
+
+```{r, echo=FALSE}
+length(muestra3)
+summary(muestra3)
 ```
 
 ```{r, echo=FALSE}
@@ -976,6 +1010,7 @@ Por lo tanto se van a tomar 1000 muestras de tamaño 10 de la distribución prom
 
 
 ```{r, echo=FALSE}
+set.seed(23)
 promedio <- sort(unique(c(muestra1,muestra2, muestra3)))
 probabilidades <- prop.table(table(c(muestra1,muestra2, muestra3)))
 N.sim <- 1000
@@ -997,7 +1032,7 @@ grid()
 ```
 
 ```{r}
-summary(medias_clientes)
+round(summary(medias_clientes))
 ```
 
 ```{r}
@@ -1005,17 +1040,17 @@ sd(medias_clientes)
 ```
 
 
-* Se puede notar que se empezo el análisis del número de servicios en un mes con un rango de 0 a 1000, pero mediante esta distribución promedio ya se tiene un rango más cerrado que va de aproximadamente de 305 a 590 servicios que es el rango en donde se espera que este el número real de servicios en un mes de peluqueros de la ciudad de Medellín.
+* Se puede notar que se empezo el análisis del número de servicios en un mes con un rango de 0 a 1000, pero mediante esta distribución promedio ya se tiene un rango más cerrado que va de aproximadamente de 312 a 590 servicios que es el rango en donde se espera que este el número real de servicios en un mes de peluqueros de la ciudad de Medellín.
 
-* La estimación promedio del número de servicios que ofrecen al mes los barberos/peluqueros/estilistas en la ciudad de Medellín es de aproximadamente 453 servicios.
+* La estimación promedio del número de servicios que ofrecen al mes los barberos/peluqueros/estilistas en la ciudad de Medellín es de aproximadamente 449 servicios.
 
-* Hay una dispersión de 47.366 unidades en las estimaciones del número de servicios en un mes de barberos/peluqeros/estilistas de la ciudad de Medellín.
+* Hay una dispersión de 46.54462 unidades en las estimaciones del número de servicios en un mes de barberos/peluqeros/estilistas de la ciudad de Medellín.
 
 ```{r}
-quantile(medias_clientes, probs = c(0.025, 0.975))
+round(quantile(medias_clientes, probs = c(0.025, 0.975)))
 ```
 
-* Con una probabilidad del 95%, el número de servicios promedio en un mes real que ofrecen los barberos/peluqueros/estilistas de la ciudad de Medellín esta entre 360 y 550 servicios.
+* Con una probabilidad del 95%, el número de servicios promedio en un mes real que ofrecen los barberos/peluqueros/estilistas de la ciudad de Medellín esta entre 358 y 540 servicios.
 
 <br>
 
@@ -1133,9 +1168,16 @@ Se saca una muestra de tamaño 7000 con reemplazo de la información suministrad
 
 ```{r, echo=FALSE}
 # Muestra experto 1
+set.seed(23)
 Nsim<-1000
 n.seguridad1 <- 7
 muestra1<-sample(Precios$Costo,Nsim*n.seguridad1,replace=T,prob=Precios$Experto1)
+```
+
+
+```{r, echo=FALSE}
+length(muestra1)
+summary(muestra1)
 ```
 
 <br>
@@ -1149,9 +1191,15 @@ Se saca una muestra de tamaño 14000 con reemplazo de la información suministra
 
 ```{r, echo=FALSE}
 # Muestra experto 2
+set.seed(23)
 Nsim<-1000
 n.seguridad2 <- 14
 muestra2<-sample(Precios$Costo,Nsim*n.seguridad2,replace=T,prob=Precios$Experto2)
+```
+
+```{r, echo=FALSE}
+length(muestra2)
+summary(muestra2)
 ```
 
 <br>
@@ -1164,12 +1212,16 @@ Se saca una muestra de tamaño 9000 con reemplazo de la información suministrad
 
 ```{r, echo=FALSE}
 # Muestra experto 3
+set.seed(23)
 Nsim<-1000
 n.seguridad3 <- 9
 muestra3<-sample(Precios$Costo,Nsim*n.seguridad3,replace=T,prob=Precios$Experto3)
 ```
 
-
+```{r, echo=FALSE}
+length(muestra3)
+summary(muestra3)
+```
 
 ```{r, echo=FALSE}
 # Mezclando muestras de los expertos
@@ -1209,6 +1261,7 @@ Por lo tanto se van a tomar 1000 muestras de tamaño 10 de la distribución prom
 
 
 ```{r, echo=FALSE}
+set.seed(23)
 promedio <- sort(unique(c(muestra1,muestra2, muestra3)))
 probabilidades <- prop.table(table(c(muestra1,muestra2, muestra3)))
 N.sim <- 1000
@@ -1239,18 +1292,18 @@ sd(medias_costos)
 ```
 
 
-* Se puede notar que se empezo el análisis del costo por servicio con un rango de 0 a 50 mil, pero mediante esta distribución promedio ya se tiene un rango más cerrado que va de aproximadamente de 7200 a 18900 (costo por servicio) que es el rango en donde se espera que este el número real del costo por servicio de peluqueros de la ciudad de Medellín.
+* Se puede notar que se empezo el análisis del costo por servicio con un rango de 0 a 50 mil, pero mediante esta distribución promedio ya se tiene un rango más cerrado que va de aproximadamente de 6550 a 20700 (costo por servicio) que es el rango en donde se espera que este el número real del costo por servicio de peluqueros de la ciudad de Medellín.
 
-* El costo promedio por servicio de los barberos/peluqueros/estilistas de la ciudad de Medellín es de 12329 que aproximadamente 12'350 pesos colombianos.
+* El costo promedio por servicio de los barberos/peluqueros/estilistas de la ciudad de Medellín es de 12189 que aproximadamente 12'200 pesos colombianos.
 
-* Hay una dispersión de 1992.085 unidades en las estimaciones del costo promedio por servicio de barberos/peluqeros/estilistas de la ciudad de Medellín.
+* Hay una dispersión de 2052.128 unidades en las estimaciones del costo promedio por servicio de barberos/peluqeros/estilistas de la ciudad de Medellín.
 
 
 ```{r}
-quantile(medias_costos, prob=c(0.025, 0.975))
+round(quantile(medias_costos, prob=c(0.025, 0.975)))
 ```
 
-* Con una probabilidad del 95% el costo promedio por servicio real de barberos/peluqueros/estilistas de la ciudad de Medellín esta entre 9100 y 16900 pesos colombianos.
+* Con una probabilidad del 95% el costo promedio por servicio real de barberos/peluqueros/estilistas de la ciudad de Medellín esta entre 8800 y 16750 pesos colombianos.
 
 <br>
 
@@ -1285,6 +1338,7 @@ Por lo tanto para el calculo de la distribución del ingreso total se aplicará 
 Se toma una muestra de tamaño 1000 para el ingreso total por sector, que es calculado como el producto de las tres muestra extraidas para cada una de las otras variable (Número peluqueros, Número de servicios, Costo por servicio)
 
 ```{r, echo=F}
+set.seed(23)
 Tam_muestra <- 1000
 
 Numero_barberos <- sample(medias_barberos, Tam_muestra, replace = T)
@@ -1310,7 +1364,7 @@ lines(density(Ingresos_sector, from=0), lwd=1.5)
 summary(Ingresos_sector)
 ```
 
-* En promedio el ingreso del sector de barberos/peluqueros/estilistas/ en un mes es de 236.800.000.000 (docientos treinta y seis mil ochocientos millones) pesos colombianos.
+* En promedio el ingreso del sector de barberos/peluqueros/estilistas/ en un mes es de 236.300.000.000 (docientos treinta y seis mil trecientos millones) pesos colombianos.
 
 
 ## Intervalo de probabilidad 
@@ -1319,7 +1373,7 @@ summary(Ingresos_sector)
 quantile(Ingresos_sector, probs = c(0.025, 0.975))
 ```
 
-* Con una probabilidad del 95% el valor del ingreso del sector debarberos/peluqueros/estilistas/ en un mes esta entre **146.340.801.563** y **348.892.559.375** pesos colombianos.
+* Con una probabilidad del 95% el valor del ingreso del sector debarberos/peluqueros/estilistas/ en un mes esta entre **146.242.753.125** y **359.115.000.000** pesos colombianos.
 
 
 <br>
@@ -1327,6 +1381,8 @@ quantile(Ingresos_sector, probs = c(0.025, 0.975))
 
 ## Referencias
 
+
+* C. (2020, 10 julio). ¿Cuánto ganan los propietarios de la barbería mensualmente / anualmente? ExoNegocios. https://exonegocios.com/cuanto-ganan-los-propietarios-de-la-barberia-mensualmente-anualmente/
 
 * Flórez Rivera, A. (2014). ELICITACIÓN DE UNA DISTRIBUCIÓN SUBJETIVA DEL VECTOR DE PARÁMETROS PI DE LA DISTRIBUCIÓN MULTINOMIAL (Magister en Estadística). Universidad Nacional de Colombia.
 
@@ -1489,6 +1545,7 @@ Se saca una muestra de tamaño 7000 con reemplazo de la información suministrad
 
 ```{r}
 #Muestra experto 1
+set.seed(23)
 Nsim <-1000
 n.seguridad1 <- 7
 muestra1<-sample(Num_barberos[,1],Nsim*n.seguridad1,replace=T,prob=Num_barberos$Experto1)
@@ -1504,6 +1561,7 @@ Se saca una muestra de tamaño 14000 con reemplazo de la información suministra
 
 ```{r}
 #Muestra experto 2
+set.seed(23)
 Nsim <-1000
 n.seguridad2 <- 14
 muestra2<-sample(Num_barberos[,1],Nsim*n.seguridad2,replace=T,prob=Num_barberos$Experto2)
@@ -1519,6 +1577,7 @@ Se saca una muestra de tamaño 9000 con reemplazo de la información suministrad
 
 ```{r}
 #Muestra experto 3
+set.seed(23)
 Nsim <-1000
 n.seguridad3 <- 9
 muestra3<-sample(Num_barberos[,1],Nsim*n.seguridad3,replace=T,prob=Num_barberos$Experto3)
@@ -1552,6 +1611,7 @@ col=c('orange','green','cyan4','red'))
 **Simulacción de las 1000 muestras de tamaño 10 extraidad de la distribución promedio del número de peluqueros**
 
 ```{r}
+set.seed(23)
 promedio <- sort(unique(c(muestra1,muestra2, muestra3)))
 probabilidades <- prop.table(table(c(muestra1,muestra2, muestra3)))
 N.sim <- 1000
@@ -1685,6 +1745,7 @@ Se saca una muestra de tamaño 7000 con reemplazo de la información suministrad
 
 ```{r}
 #Muestra experto 1
+set.seed(23)
 Nsim <-1000
 n.seguridad1 <- 7
 muestra1<-sample(Num_clientes[,1],Nsim*n.seguridad1,replace=T,prob=Num_clientes$Experto1)
@@ -1698,6 +1759,7 @@ Se saca una muestra de tamaño 14000 con reemplazo de la información suministra
 
 ```{r}
 #Muestra experto 2
+set.seed(23)
 Nsim <-1000
 n.seguridad2 <- 14
 muestra2<-sample(Num_clientes[,1],Nsim*n.seguridad2,replace=T,prob=Num_clientes$Experto2)
@@ -1711,6 +1773,7 @@ Se saca una muestra de tamaño 9000 con reemplazo de la información suministrad
 
 ```{r}
 #Muestra experto 1
+set.seed(23)
 Nsim <-1000
 n.seguridad3 <- 9
 muestra3<-sample(Num_clientes[,1],Nsim*n.seguridad3,replace=T,prob=Num_clientes$Experto3)
@@ -1746,6 +1809,7 @@ col=c('orange','green','cyan4','red'))
 
 
 ```{r}
+set.seed(23)
 promedio <- sort(unique(c(muestra1,muestra2, muestra3)))
 probabilidades <- prop.table(table(c(muestra1,muestra2, muestra3)))
 N.sim <- 1000
@@ -1875,6 +1939,7 @@ Se saca una muestra de tamaño 7000 con reemplazo de la información suministrad
 
 ```{r}
 # Muestra experto 1
+set.seed(23)
 Nsim<-1000
 n.seguridad1 <- 7
 muestra1<-sample(Precios$Costo,Nsim*n.seguridad1,replace=T,prob=Precios$Experto1)
@@ -1891,6 +1956,7 @@ Se saca una muestra de tamaño 14000 con reemplazo de la información suministra
 
 ```{r}
 # Muestra experto 2
+set.seed(23)
 Nsim<-1000
 n.seguridad2 <- 14
 muestra2<-sample(Precios$Costo,Nsim*n.seguridad2,replace=T,prob=Precios$Experto2)
@@ -1906,6 +1972,7 @@ Se saca una muestra de tamaño 9000 con reemplazo de la información suministrad
 
 ```{r}
 # Muestra experto 3
+set.seed(23)
 Nsim<-1000
 n.seguridad3 <- 9
 muestra3<-sample(Precios$Costo,Nsim*n.seguridad3,replace=T,prob=Precios$Experto3)
@@ -1938,6 +2005,7 @@ col=c('orange','green','cyan4','red'))
 **Simulacción de las 1000 muestras de tamaño 10 extraidad de la distribución promedio del costo por servicio**
 
 ```{r}
+set.seed(23)
 promedio <- sort(unique(c(muestra1,muestra2, muestra3)))
 probabilidades <- prop.table(table(c(muestra1,muestra2, muestra3)))
 N.sim <- 1000
@@ -1985,6 +2053,7 @@ quantile(medias_costos, prob=c(0.025, 0.975))
 **Extracción de la muestra del ingreso total**
 
 ```{r}
+set.seed(23)
 Tam_muestra <- 1000
 
 Numero_barberos <- sample(medias_barberos, Tam_muestra, replace = T)
