@@ -941,8 +941,12 @@ muestra1<-sample(Num_clientes[,1],Nsim*n.seguridad1,replace=T,prob=Num_clientes$
 
 
 ```{r, echo=FALSE}
-length(muestra1)
-summary(muestra1)
+resumen <- summary(muestra1)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra1)))
+
+kable(df, row.names = F, caption = "Resumen del experto 1 para el número de servicios promedio en un mes") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 <br>
@@ -961,8 +965,12 @@ muestra2<-sample(Num_clientes[,1],Nsim*n.seguridad2,replace=T,prob=Num_clientes$
 
 
 ```{r, echo=FALSE}
-length(muestra2)
-summary(muestra2)
+resumen <- summary(muestra2)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra2)))
+
+kable(df, row.names = F, caption = "Resumen del experto 2 para el número de servicios promedio en un mes") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 <br>
 
@@ -980,8 +988,12 @@ muestra3<-sample(Num_clientes[,1],Nsim*n.seguridad3,replace=T,prob=Num_clientes$
 
 
 ```{r, echo=FALSE}
-length(muestra3)
-summary(muestra3)
+resumen <- summary(muestra3)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra3)))
+
+kable(df, row.names = F, caption = "Resumen del experto 3 para el número de servicios promedio en un mes") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 ```{r, echo=FALSE}
@@ -1044,12 +1056,14 @@ lines(density(medias_clientes, from=0), lwd=1.5)
 grid()
 ```
 
-```{r}
-round(summary(medias_clientes))
-```
+```{r, echo=FALSE}
+resumen <- summary(medias_clientes)
+desviacion <- sd(medias_clientes)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = desviacion, Longuitud = c(length(medias_clientes)))
 
-```{r}
-sd(medias_clientes)
+kable(df, row.names = F, caption = "Resumen para el número de servicios promedio en un mes") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 
@@ -1189,8 +1203,12 @@ muestra1<-sample(Precios$Costo,Nsim*n.seguridad1,replace=T,prob=Precios$Experto1
 
 
 ```{r, echo=FALSE}
-length(muestra1)
-summary(muestra1)
+resumen <- summary(muestra1)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra1)))
+
+kable(df, row.names = F, caption = "Resumen del experto 1 para el costo promedio por servicio") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 <br>
@@ -1211,8 +1229,12 @@ muestra2<-sample(Precios$Costo,Nsim*n.seguridad2,replace=T,prob=Precios$Experto2
 ```
 
 ```{r, echo=FALSE}
-length(muestra2)
-summary(muestra2)
+resumen <- summary(muestra2)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra2)))
+
+kable(df, row.names = F, caption = "Resumen del experto 2 para el costo promedio por servicio") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 <br>
@@ -1232,8 +1254,12 @@ muestra3<-sample(Precios$Costo,Nsim*n.seguridad3,replace=T,prob=Precios$Experto3
 ```
 
 ```{r, echo=FALSE}
-length(muestra3)
-summary(muestra3)
+resumen <- summary(muestra3)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra3)))
+
+kable(df, row.names = F, caption = "Resumen del experto 3 para el costo promedio por servicio") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 ```{r, echo=FALSE}
@@ -1296,12 +1322,14 @@ lines(density(medias_costos, from=0), lwd=1.5)
 grid()
 ```
 
-```{r}
-summary(medias_costos)
-```
+```{r, echo=FALSE}
+resumen <- summary(medias_costos)
+desviacion <- sd(medias_costos)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = desviacion, Longuitud = c(length(medias_costos)))
 
-```{r}
-sd(medias_costos)
+kable(df, row.names = F, caption = "Resumen para el costo promedio por servicio") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 
@@ -1373,8 +1401,14 @@ lines(density(Ingresos_sector, from=0), lwd=1.5)
 ```
 
 
-```{r}
-summary(Ingresos_sector)
+```{r, echo=FALSE}
+resumen <- summary(Ingresos_sector)
+desviacion <- sd(Ingresos_sector)
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = desviacion, Longuitud = c(length(Ingresos_sector)))
+
+kable(df, row.names = F, caption = "Resumen para los ingresos del sector") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 * En promedio el ingreso del sector de barberos/peluqueros/estilistas/ en un mes es de 236.300.000.000 (docientos treinta y seis mil trecientos millones) pesos colombianos.
