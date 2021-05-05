@@ -1,13 +1,31 @@
 ---
 title: "Impacto que tiene el sector de los peluqueros en la economía de Medellín."
 subtitle: "Parcial 1 Estadística Bayesiana"
-author:
-- Jennifer Salazar Galvis
-- Juan Esteban Sanchez Pulgarin
+author: 
+- "Jennifer Salazar Galvis"
+- "Juan Esteban Sanchez Pulgarin"
+
+date: "04/05/2021"
 output:
-  html_document: default
-  word_document: default
+  rmdformats::readthedown
 ---
+
+<style>
+
+#sidebar a:hover {
+    color:#262626;
+    background-color: #4DAEA9;
+    cursor: pointer;
+}
+
+button{
+  width: 100%;
+  color:#4DAEA9;
+}
+
+</style>
+
+<script language="JavaScript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -22,7 +40,7 @@ library(kableExtra)
 <center> <h2> Introducción </h2> </center>
 
 
-El auge que ha tomado el sector de belleza masculino en especial los negocios dedicados al corte de pelo y barba exclusivos para los hombres a través de los últimos años ha tenido un impacto impresionante en la ciudad de Medellín el cual ha creado de alguna manera u otra cambios culturales que la sociedad ha percibido, pero más allá de esto, ha generado un impacto económico, el cual se desconoce y en este momento nace la inspiración de intentar estudiarlo, porque este sector tiene una influencia sobre los rincones más ricos y más pobres de la cuidad, por tanto es necesario ir más allá e intentar descubrir qué porcentaje de la economía de Medellín puede estar protagonizada por este sector y lo que pasa es que este tipo de estudios es muy difícil manejarlos mediante la estadística clásica, ya que para hacer estimaciones adecuadas de este campo tan amplio se deben tomar tamaños de muestra muy grandes lo cual es algo muy costoso y requiere mucho por ello nos apoyamos de otras herramientas como la estadística Bayesiana con la que podemos tener soluciones más factibles que nos pueden llevar a buenos resultados y son técnicas más viables las cuales valoran el conocimiento que expertos en el área tienen frente a este problema que se quiere estudiar.
+El auge que ha tomado el sector de belleza masculino, en especial los negocios dedicados al corte de pelo y barba exclusivos para los hombres, a través de los últimos años ha tenido un impacto impresionante en la ciudad de Medellín, el cual ha creado de alguna manera u otra cambios culturales que la sociedad ha percibido, pero más allá de esto, ha generado un impacto económico, el cual se desconoce, y en este momento nace la inspiración de intentar estudiarlo; porque este sector tiene una influencia sobre los rincones más ricos y más pobres de la cuidad, por tanto es necesario ir más allá e intentar descubrir qué porcentaje de la economía de Medellín puede estar protagonizada por este sector, pero lo que pasa es que este tipo de estudios es muy difícil manejarlos mediante la estadística clásica, ya que para hacer estimaciones adecuadas de este campo tan amplio se deben tomar tamaños de muestra muy grandes, lo cual es algo muy costoso y requiere mucho, por ello nos apoyamos de otras herramientas como la estadística Bayesiana con la que podemos tener soluciones más factibles que nos pueden llevar a buenos resultados y son técnicas más viables las cuales valoran el conocimiento que expertos en el área tienen frente a este problema que se quiere estudiar.
 
 
 ## Marco teórico
@@ -649,7 +667,7 @@ Para cada uno de los expertos se asignan cada uno de las siguiente muestras equi
 * Experto 3: 9
 
 
-# Simulación
+# Simulación del número de peluqueros
 
 Se realizan simulaciones del número de barberos para cada uno de los expertos, en donde se toma una muestra de tamaño $1000*n~seguridad$ donde $n~seguridad$ es el tamaño muestral equivalente a los años de experiencia que tiene en el campo cada uno de los expertos, de tal manera que se le da mayor peso al que más años de experiencia lleva en el campo, porque se espera que entre más años lleve tiene un conocimiento más acertado.
 
@@ -793,7 +811,7 @@ resumen <- summary(medias_barberos)
 desviacion <- sd(medias_barberos)
 df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = c(desviacion), Longuitud = c(length(medias_barberos)))
 
-kable(df, row.names = F, caption = "Resumen para  2 para el numero de barberos") %>%
+kable(df, row.names = F, caption = "Resumen para el numero de barberos") %>%
   kable_paper("striped", full_width = F) %>%
   row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
@@ -918,9 +936,9 @@ col=c('orange','green','cyan4','red'))
 
 <br>
 
-# Simulación
+# Simulación del número de servicios promedio al mes
 
-Se realizan simulaciones del número de servicios peomedio en un mes para cada uno de los expertos, en donde se toma una muestra de tamaño $1000*n~seguridad$ donde $n~seguridad$ es el tamaño muestral equivalente a los años de experiencia que tiene en el campo cada uno de los expertos, de tal manera que se le da mayor peso al que más años de experiencia lleva en el campo, porque se espera que entre más años lleve tiene un conocimiento más acertado.
+Se realizan simulaciones del número de servicios promedio en un mes para cada uno de los expertos, en donde se toma una muestra de tamaño $1000*n~seguridad$ donde $n~seguridad$ es el tamaño muestral equivalente a los años de experiencia que tiene en el campo cada uno de los expertos, de tal manera que se le da mayor peso al que más años de experiencia lleva en el campo, porque se espera que entre más años lleve tiene un conocimiento más acertado.
 
 
 **Experto 1**
@@ -1180,7 +1198,7 @@ col=c('orange','green','cyan4','red'))
 
 <br>
 
-# Simulación
+# Simulación del costo por servicio promedio
 
 Se realizan simulaciones del costo por servicio promedio en un mes para cada uno de los expertos, en donde se toma una muestra de tamaño $1000*n~seguridad$ donde $n~seguridad$ es el tamaño muestral equivalente a los años de experiencia que tiene en el campo cada uno de los expertos, de tal manera que se le da mayor peso al que más años de experiencia lleva en el campo, porque se espera que entre más años lleve tiene un conocimiento más acertado.
 
@@ -1351,7 +1369,7 @@ round(quantile(medias_costos, prob=c(0.025, 0.975)))
 
 <hr>
 
-## Estimación de la variable de intéres
+# Estimación de la variable de intéres
 
 **Ahora se va a realizar la estimación de la variable que era el verdadero interés de este estudio**
 
@@ -1426,7 +1444,7 @@ quantile(Ingresos_sector, probs = c(0.025, 0.975))
 <br>
 <hr>
 
-## Referencias
+# Referencias
 
 
 * C. (2020, 10 julio). ¿Cuánto ganan los propietarios de la barbería mensualmente / anualmente? ExoNegocios. https://exonegocios.com/cuanto-ganan-los-propietarios-de-la-barberia-mensualmente-anualmente/
@@ -1444,7 +1462,7 @@ quantile(Ingresos_sector, probs = c(0.025, 0.975))
 <br>
 <hr>
 
-### Códigos de R utilizados
+# Códigos de R utilizados
 
 Códigos para hacer las plantillas de elicitación:
 
