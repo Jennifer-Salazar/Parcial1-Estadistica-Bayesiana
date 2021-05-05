@@ -825,8 +825,14 @@ kable(df, row.names = F, caption = "Resumen para el numero de barberos") %>%
 * Hay una dispersión de 5785.287 unidades en las estimaciones del número de barberos/peluqeros/estilistas de la ciudad de Medellín.
 
 
-```{r}
-round(quantile(medias_barberos, prob=c(0.025, 0.975)))
+```{r, echo=FALSE}
+df <- data.frame(round(quantile(medias_barberos, prob=c(0.025, 0.975)))[1], round(quantile(medias_barberos, prob=c(0.025, 0.975)))[2])
+
+colnames(df) <- c("Limite inferior 2.5%", "Limite superior 97.5%")
+
+kable(df, row.names = F, caption = "Intervalo de probabilidad para el número de peluqueros") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 * Con una probabilidad del 95% el número real de barberos/peluqueros/estilistas que hay en la ciudad de Medellín esta entre 31250 y 53750 personas.
@@ -1091,8 +1097,14 @@ kable(df, row.names = F, caption = "Resumen para el número de servicios promedi
 
 * Hay una dispersión de 46.54462 unidades en las estimaciones del número de servicios en un mes de barberos/peluqeros/estilistas de la ciudad de Medellín.
 
-```{r}
-round(quantile(medias_clientes, probs = c(0.025, 0.975)))
+```{r, echo=FALSE}
+df <- data.frame(round(quantile(medias_clientes, probs = c(0.025, 0.975)))[1], round(quantile(medias_clientes, probs = c(0.025, 0.975)))[2])
+
+colnames(df) <- c("Limite inferior 2.5%", "Limite superior 97.5%")
+
+kable(df, row.names = F, caption = "Intervalo de probabilidad para el número de servicios promedio en un mes") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 * Con una probabilidad del 95%, el número de servicios promedio en un mes real que ofrecen los barberos/peluqueros/estilistas de la ciudad de Medellín esta entre 358 y 540 servicios.
@@ -1358,8 +1370,14 @@ kable(df, row.names = F, caption = "Resumen para el costo promedio por servicio"
 * Hay una dispersión de 2052.128 unidades en las estimaciones del costo promedio por servicio de barberos/peluqeros/estilistas de la ciudad de Medellín.
 
 
-```{r}
-round(quantile(medias_costos, prob=c(0.025, 0.975)))
+```{r, echo=FALSE}
+df <- data.frame(round(quantile(medias_costos, prob=c(0.025, 0.975)))[1], round(quantile(medias_costos, prob=c(0.025, 0.975)))[2])
+
+colnames(df) <- c("Limite inferior 2.5%", "Limite superior 97.5%")
+
+kable(df, row.names = F, caption = "Intervalo de probabilidad para el costo promedio por servicio") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 * Con una probabilidad del 95% el costo promedio por servicio real de barberos/peluqueros/estilistas de la ciudad de Medellín esta entre 8800 y 16750 pesos colombianos.
@@ -1434,8 +1452,14 @@ kable(df, row.names = F, caption = "Resumen para los ingresos del sector") %>%
 
 ## Intervalo de probabilidad 
 
-```{r}
-quantile(Ingresos_sector, probs = c(0.025, 0.975))
+```{r, echo=F}
+df <- data.frame(quantile(Ingresos_sector, probs = c(0.025, 0.975))[1], quantile(Ingresos_sector, probs = c(0.025, 0.975))[2])
+
+colnames(df) <- c("Limite inferior 2.5%", "Limite superior 97.5%")
+
+kable(df, row.names = F, caption = "Intervalo de probabilidad para el ingreso total del sector por mes") %>%
+  kable_paper("striped", full_width = F) %>%
+  row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 * Con una probabilidad del 95% el valor del ingreso del sector debarberos/peluqueros/estilistas/ en un mes esta entre **146.242.753.125** y **359.115.000.000** pesos colombianos.
