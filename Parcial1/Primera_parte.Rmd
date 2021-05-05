@@ -3,7 +3,7 @@ title: "Impacto que tiene el sector de los peluqueros en la economía de Medell�
 subtitle: "Parcial 1 Estadística Bayesiana"
 author: 
 - "Jennifer Salazar Galvis"
-- "Juan Esteban Sanchez Pulgarin"
+- "Juan Esteban Sánchez Pulgarin"
 
 date: "04/05/2021"
 output:
@@ -143,7 +143,7 @@ kable(data.frame(Altura = c(0,5,15,20,35,50,60,75,90,95,100), Expresión = c("To
 
 #### La distribución del número promedio de servicios a clientes (pueden ser los mismos clientes varias veces) que atiende cada peluquero en un mes fue elicitada mediante elicitación gráfica a mano alzada:
 
-Los valores para el "eje x" es decir los valores que representan el número de servicios en un mes toma valores de 0 a 1000 (avanzando de a 25 de manera equiespaciada) los cuales fueron considerados después de realizar una investigación y de analizar por lo tanto se considero 0 que es un valor donde no atienden a clientes y 1000 es un caso en donde el especialista trabaja más de 15 horas diarias, atiende en muy poco tiempo a cada uno de sus clientes y además son turnos seguidos, es decir sin tiempo de descanso, por lo que se espera que este valor sea tan alta que sea poco probable y con este se da via a que el valor promedio de clientes este entre el rango de valores disponibles y estuvieran en los valores que los expertos pensaban y efectivamente fue un rango adecuado.
+Los valores para el "eje x" es decir los valores que representan el número de servicios en un mes toma valores de 0 a 1000 (avanzando de a 25 de manera equiespaciada) los cuales fueron considerados después de realizar una investigación y de analizar por lo tanto se considera el valor de 0  que es donde no atienden a clientes y 1000 es un caso en donde el especialista trabaja más de 15 horas diarias, atiende en muy poco tiempo a cada uno de sus clientes y además son turnos seguidos, es decir sin tiempo de descanso, por lo que se espera que este valor sea tan alta que sea poco probable y con este se da vía a que el valor promedio de clientes este entre el rango de valores disponibles y estuvieran en los valores que los expertos pensaban y efectivamente fue un rango adecuado.
 
 Las expresiones del "Eje y" fueron consideradas por los analistas que están trabajando este estudio como las expresiones más adecuadas y fueron acomodadas a una altura que de verdad trasmitiera el nivel de seguridad correspondiente, este proceso fue realizado varias veces de tal manera que al final quedo de la manera más acertada para que cualquier persona lo asimilara correctamente.
 
@@ -162,7 +162,7 @@ kable(data.frame(Altura = c(0,5,15,20,35,50,60,75,90,95,100), Expresión = c("To
 <hr>
 <br>
 
-**Elicitación via muestras hipoteticas** Esta basada en la imaginación de una muestra de tamaño n, en la cual mediante casillas que presentan los valores posibles que puede tomar el parametro de interes, se deben acomodar en cada uno de estos una porción de la muestra de tal manera que al sumar la cantidad presente en cada casilla debe dar un total de n, es decir, se debe repartir la muestra entre todos los valores que puede tomar la variable a estudiar, de tal manera que en valores más posible debe quedar una porción de la muestra más grande.
+**Elicitación vía muestras hipotéticas** Esta basada en la imaginación de una muestra de tamaño n, en la cual mediante casillas que presentan los valores posibles que puede tomar el parámetro de interés, se deben acomodar en cada uno de estos una porción de la muestra de tal manera que al sumar la cantidad presente en cada casilla debe dar un total de n, es decir, se debe repartir la muestra entre todos los valores que puede tomar la variable a estudiar, de tal manera que en valores más posible debe quedar una porción de la muestra más grande.
 
 <br>
 
@@ -186,7 +186,7 @@ La plantilla se presenta a continuación:
 
 **Expertos elegidos**
 
-Para realizar estos procesos de elicitación se requieren expertos reales es decir barberos, peluqueros o estilistas, debido a que este proceso no se le debe hacer por ejemplo a un cliente ya que este puede tener un punto de vista sobre el tema sesgado a su comportamiento particular sobre este entorno y no va a tener la dimensión sobre todo el campo como lo podria tener un especialista en el tema.
+Para realizar estos procesos de elicitación se requieren expertos reales es decir barberos, peluqueros o estilistas, debido a que este proceso no se le debe hacer por ejemplo a un cliente ya que este puede tener un punto de vista sobre el tema sesgado a su comportamiento particular sobre este entorno y no va a tener la dimensión sobre todo el campo como lo podría tener un especialista en el tema.
 
 Para realizar las tres elicitaciones descritas anteriormente se buscan a tres expertos:
 
@@ -200,16 +200,16 @@ Barbero/peluquero del barrio Castilla de 32 años de edad, es un experto que lle
 
 Experto 2
 
-**Marlon Hernandez**
+**Marlon Hernández**
 
-Barbero/peluquero del barrio Castilla de 24 años de edad, es un experto que lleva aproximadamente 7 años en el campo, ha trabajado en 3 locales, los cuales han estado ubicado en el barrio Castilla y en el barrio Boyaca las brisas y actualmente se encuentra ejerciendolo desde su propia casa, siente mucho gusto por el área, siente que es en algo que desempeña muy bien y dia a dia aprende cosas nuevas.
+Barbero/peluquero del barrio Castilla de 24 años de edad, es un experto que lleva aproximadamente 7 años en el campo, ha trabajado en 3 locales, los cuales han estado ubicado en el barrio Castilla y en el barrio Boyacá las brisas y actualmente se encuentra ejerciéndolo desde su propia casa, siente mucho gusto por el área, siente que es en algo que desempeña muy bien y día a día aprende cosas nuevas.
 
 
 Experto 3
 
-**Mateo Rodriguez**
+**Mateo Rodríguez**
 
-Barbero/peluquero del barrio 12 de octubre de 22 años de edad, es un experto que lleva aproximadamente 4 años en el campo, inicio su aprendizaje de barberia al lado de su hermano el cual tenia un local en Itagüi y actualmente tiene su propio local en el barrio 12 de octubre con el que lleva 3 años.
+Barbero/peluquero del barrio 12 de octubre de 22 años de edad, es un experto que lleva aproximadamente 4 años en el campo, inicio su aprendizaje de barbería al lado de su hermano el cual tenía un local en Itagüí y actualmente tiene su propio local en el barrio 12 de octubre con el que lleva 3 años.
 
 
 ## Diseño y validación de preguntas
@@ -218,32 +218,32 @@ Las preguntas que se le plantearon a cada uno de los expertos fueron las siguien
 
 1. ¿Cuántos barberos/peluqueros/estilistas que atienden hombres cree que hay en la ciudad de Medellín?
 
-2. ¿Cúantos clientes atiende en un mes en promedio un barbero/peluquero/estilista de la ciudad de Medellín, es decir, cuantos servicios tiene al mes?
+2. ¿Cuántos clientes atiende en un mes en promedio un barbero/peluquero/estilista de la ciudad de Medellín, es decir, cuantos servicios tiene al mes?
 
-3. ¿Cúanto cree usted que en promedio cobran los barberos/peluqueros/estilistas por ofrecer un servicio (procedimiento sobre el cabello masculino)?
+3. ¿Cuánto cree usted que en promedio cobran los barberos/peluqueros/estilistas por ofrecer un servicio (procedimiento sobre el cabello masculino)?
 
 
 ## Recomendaciones que se tuvieron en cuenta a la hora de elicitar
 
 * La opinión de los expertos es la más valiosa para elicitar. 
 
-* A los expertos se les debe pedir que expresen su opinión sobre cantidades obsevables.
+* A los expertos se les debe pedir que expresen su opinión sobre cantidades observables.
 
 
 * A los expertos no se les debe pedir estimaciones de los momentos de una distribución. 
 
-* Hay que proporcionales retroalimentación frecuentemente durante el proceso de elicitación.
+* Hay que proporcionarles retroalimentación frecuentemente durante el proceso de elicitación.
 
 * El objetivo es elicitar una distribución que represente el conocimiento presente del experto, y es útil tener un resumen sobre cuál es la justificación de este conocimiento.
 
-* Cualquier interés personal o fianciero que el experto pueda tener tener en las inferencias o decisiones que dependerían (aún marginalmente) en la distribución del experto, debe ser declarado.
+* Cualquier interés personal o financiero que el experto pueda tener en las inferencias o decisiones que dependerían (aun marginalmente) en la distribución del experto, debe ser declarado.
 
 
 * Debe proporcionarse un entrenamiento para familiarizar al experto con las interpretaciones probabilísticas y tanto con sus conceptos y propiedades que se requieran en la elicitación.
 
-* Es útil correr un ejercicio de elicitación ficticia para proporcionar práctica en el protocolo que el facilicitador se propone utilizar.
+* Es útil correr un ejercicio de elicitación ficticia para proporcionar práctica en el protocolo que el facilitador se propone utilizar.
 
-* Un registro debe llevarse de la elicitación. Este debe idealmente contener todas las preguntas que fueron realizadas por el facilicitador junto con las respuestas del experto,
+* Un registro debe llevarse de la elicitación. Este debe idealmente contener todas las preguntas que fueron realizadas por el facilitador junto con las respuestas del experto,
 también como el proceso con el que se ajustó la distribución de probabilidad con estas respuestas.
 
 
@@ -251,9 +251,9 @@ también como el proceso con el que se ajustó la distribución de probabilidad 
 
 - Para realizar este proceso hay que tener en cuenta los dos roles que se presentan que son de facilitador y experto:
 
-**Facilitadores:** En este caso son los analistas que van a  preguntar y guiar en el proceso de elicitación.
+**Facilitadores: ** En este caso son los analistas que van a preguntar y guiar en el proceso de elicitación.
 
-**Expertos:** Especialistas en el campo, es decir, barberos, peluqueros y estilistas escogidos para diligenciar las plantillas de elicitaciones.
+**Expertos: ** Especialistas en el campo, es decir, barberos, peluqueros y estilistas escogidos para diligenciar las plantillas de elicitaciones.
 
 <br>
 
@@ -262,12 +262,12 @@ también como el proceso con el que se ajustó la distribución de probabilidad 
 
 Teniendo en cuenta los roles descritos anteriormente se procede con una de las recomendaciones:
 
-**Es útil correr un ejercicio de elicitación ficticia para proporcionar práctica en el protocolo que el facilicitador se propone utilizar.**
+**Es útil correr un ejercicio de elicitación ficticia para proporcionar práctica en el protocolo que el facilitador se propone utilizar.**
 
 
-Mediante esta recomedación los dos facilitadores encargados de la investigación proceden a hacer una elicitación ficticia, en la cual uno de los analistas desempeña el rol de facilitador y el otro el rol de experto y realizan las tres elicitaciones planteadas para este caso de estudio, esta fue registrada mediante un video.
+Mediante esta recomendación los dos facilitadores encargados de la investigación proceden a hacer una elicitación ficticia, en la cual uno de los analistas desempeña el rol de facilitador y el otro el rol de experto y realizan las tres elicitaciones planteadas para este caso de estudio, esta fue registrada mediante un video.
 
-El video lo pueden visitar en el sigiente link...[Elicitación ficticia del sector peluqueros](https://youtu.be/GzqBzVLnim0)
+El video lo pueden visitar en el siguiente link...[Elicitación ficticia del sector peluqueros](https://youtu.be/GzqBzVLnim0)
 
 
 <div>
@@ -277,14 +277,14 @@ El video lo pueden visitar en el sigiente link...[Elicitación ficticia del sect
 </p>
 
 
-Mediante esta elicitación ficticia se pretendia preparar a los dos analistas para desempeñar un buen rol de facilitador, prepararse en las preguntas que se le van a proporcionar a los expertos, la información que se le va a otorgar a los mismos y correcciones que se deban hacer en el proceso de elicitación, como mejorar las plantillas de elicitación y demás anormalidades que se perciban en la prueba ficticia.
+Mediante esta elicitación ficticia se pretende preparar a los dos analistas para desempeñar un buen rol de facilitador, prepararse en las preguntas que se le van a proporcionar a los expertos, la información que se le va a otorgar a los mismos y correcciones que se deban hacer en el proceso de elicitación, como mejorar las plantillas de elicitación y demás anormalidades que se perciban en la prueba ficticia.
 
 
-**Los aspectos a mejorar despues de realizar la elicitación ficticia son:**
+**Los aspectos a mejorar después de realizar la elicitación ficticia son:**
 
 - Organizar el rango de valores en la plantilla de elicitación del número de peluqueros en la ciudad de Medellín.
-- Mejoramiento de la forma de dirigirse a los expertos, para darse a entender de una manera más acertada ya que tienen muy poco conocimiento estadístico, por lo tanto es necesario el uso de terminologia más generales.
-- Brindar la información adecuada para que el experto tenga unas estimaciones acorde a lo que piensa y coherente con la realidad.
+- Mejoramiento de la forma de dirigirse a los expertos, para darse a entender de una manera más acertada ya que tienen muy poco conocimiento estadístico, por lo tanto, es necesario el uso de terminología más generales.
+- Brindar la información adecuada para que el experto tenga unas estimaciones acordes a lo que piensa y coherente con la realidad.
 
 
 <br>
@@ -294,12 +294,9 @@ Mediante esta elicitación ficticia se pretendia preparar a los dos analistas pa
 
 **1) Mapa de Medellín: con la finalidad de que el experto dimensione el lugar donde labora en comparación con la dimensión que es toda la ciudad de Medellín**
 
-
-<center>
-
+<p style = 'text-align:center;'>
 ![](Mapa_medellin_barrios.png){width=60% height=60%}
-
-</center>
+</p>
 
 El cuál esta compuesto por:
 
@@ -336,12 +333,12 @@ Este fue elicitado por:
 
 Facilitador 1: Jennifer Salazar Galvis
 
-A este experto se acudio hasta su local, en el cual se le pidio la colaboración en el proceso de elicitación a cambio de pagarle el tiempo de un corte de cabello el cual corresponde a 12.000 pesos colombianos, muy amablemente, el experto ofrecio gran parte de su tiempo para realizar bien este proceso.
+A este experto se acudió hasta su local, en el cual se le pidió la colaboración en el proceso de elicitación a cambio de pagarle el tiempo de un corte de cabello el cual corresponde a 12.000 pesos colombianos, muy amablemente, el experto ofreció gran parte de su tiempo para realizar bien este proceso.
 
-A el experto se le explico como debia realizar cada uno de los procesos de elicitación, se le dieron las pautas y toda la información necesaria para ayudar a guiarlo en su proceso de estimación, el facilitador lo estuvo acompañando aproximadamente 3 horas en las que el experto estuvo analizando con mucha calma todo, luego de eso, se comenzo a la realización del proceso de elicitación el cual fue grabado para que los facilitadores despúes pudieran hacer uso de este recurso y utilizarlo en su analisis
+A el experto se le explico cómo debía realizar cada uno de los procesos de elicitación, se le dieron las pautas y toda la información necesaria para ayudar a guiarlo en su proceso de estimación, el facilitador lo estuvo acompañando aproximadamente 3 horas en las que el experto estuvo analizando con mucha calma todo, luego de eso, se comenzó a la realización del proceso de elicitación el cual fue grabado para que los facilitadores después pudieran hacer uso de este recurso y utilizarlo en su análisis
 
 
-El link del video se presenta a continuación....[Proceso de Elicitación Experto 1](https://youtu.be/szkTps58MDM)
+El link del video se presenta a continuación…[Proceso de Elicitación Experto 1](https://youtu.be/szkTps58MDM)
 
 
 <div>
@@ -361,7 +358,7 @@ El link del video se presenta a continuación....[Proceso de Elicitación Expert
 
 **Resumen de la elicitación**
 
-A la hora del experto estar realizando esta elicitación, comenzo a pensar muy concentradamente en esta pregunta, incluso la plantea a otros de sus compañeros de trabajo, él consideraba que el número de especialistas en cabello masculino realmente era grande, y en especial ya que en el sector que se encuentra laborando se rodea de muchos locales que cumplen esta condición, porque el afirmaba que en su propio barrio habia una cantidad muy grande, entonces era impresionante todo lo que podia haber en Medellín, además que él ha tenido la oportunidad de conocer mucho a Medellín en anteriores trabajos y dice que en la mayoria de calles de Medellín hay locales de estos, por lo tanto él dice que realmente la cantidad peluqueros es mucho y que adicionalmente el considera que la mayoria de locales no estan registrados por el DANE por lo que considera que pueden ser muchos más de lo que la información presente en internet brinda.
+A la hora del experto estar realizando esta elicitación, comenzó a pensar muy concentradamente en esta pregunta, incluso la plantea a otros de sus compañeros de trabajo, él consideraba que el número de especialistas en cabello masculino realmente era grande, y en especial ya que en el sector que se encuentra laborando se rodea de muchos locales que cumplen esta condición, porque el afirmaba que en su propio barrio había una cantidad muy grande, entonces era impresionante todo lo que podía haber en Medellín, además que él ha tenido la oportunidad de conocer mucho a Medellín en anteriores trabajos y dice que en la mayoría de calles de Medellín hay locales de estos, por lo tanto él dice que realmente la cantidad peluqueros es mucho y que adicionalmente el considera que la mayoría de locales no están registrados por el DANE por lo que considera que pueden ser muchos más de lo que la información presente en internet brinda.
 
 
 <br>
@@ -374,7 +371,7 @@ A la hora del experto estar realizando esta elicitación, comenzo a pensar muy c
 
 **Resumen de la elicitación**
 
-Para responder esta pregunta el experto entro a analizar cuantos cliente atendia en semana, considerando que los dias de lunes a miercoles de por si atiende un número menor de clientes que los que atiende jueves, viernes y en especial el fin de semana que es mucho mayor, más o menos analizo como se comporta una semana en promedio y trato de llevar este comportamiento a nivel de un mes y dar una estimación de lo que el considera, además de intentar pensar en otros barberos que ha tenido la oportunidad de conocer y sus flujos de clientes.
+Para responder esta pregunta el experto entro a analizar cuantos cliente atendía en semana, considerando que los días de lunes a miércoles de por si atiende un número menor de clientes que los que atiende jueves, viernes y en especial el fin de semana que es mucho mayor, más o menos analizo cómo se comporta una semana en promedio y trato de llevar este comportamiento a nivel de un mes y dar una estimación de lo que él considera, además de intentar pensar en otros barberos que ha tenido la oportunidad de conocer y sus flujos de clientes.
 
 <br>
 
@@ -389,7 +386,7 @@ Para responder esta pregunta el experto entro a analizar cuantos cliente atendia
 
 **Resumen de la elicitación**
 
-Para esta pregunta el experto consideraba que la mayoria de especialistas en cabello masculino cobrarian precios alrededor de lo que él cobra, es decir más o menos entre 7500 y 12500 y a medida que se alejaba de estos precios colocaba un tamaño de muestra menor, pero en precios de 25000 y 32500 coloco una proporción menor  que en los precios de 32500 a 42500 dado que consideraba que los unicos que podian cobrar estos precios tan altos eran especilistas de centros comerciales o de zonas de estratos más altos y que estos tendrian a cobrar valores muy altos y no intermedios o bajos y este experto considera que encontrar a alguien que cobre menos de 2500 es una muestra de mil es casi imposible al igual que alguien que cobre más de 42500 pesos colombianos.
+Para esta pregunta el experto consideraba que la mayoría de especialistas en cabello masculino cobrarían precios alrededor de lo que él cobra, es decir más o menos entre 7500 y 12500 y a medida que se alejaba de estos precios colocaba un tamaño de muestra menor, pero en precios de 25000 y 32500 coloco una proporción menor  que en los precios de 32500 a 42500 dado que consideraba que los únicos que podían cobrar estos precios tan altos eran especialistas de centros comerciales o de zonas de estratos más altos y que estos tendrían a cobrar valores muy altos y no intermedios o bajos y este experto considera que encontrar a alguien que cobre menos de 2500 es una muestra de mil es casi imposible al igual que alguien que cobre más de 42500 pesos colombianos.
 
 
 ## Experto 2
@@ -398,12 +395,12 @@ Este fue elicitado por:
 
 Facilitador 1: Jennifer Salazar Galvis
 
-A este experto el facilitador previamente tenia conocimieto sobre él y sobre la expeticie que tiene en el tema ya que conoce que lleva más de 7 años en el campo, por lo tanto el facilitador lo contacto por redes sociales y le pidio amablemente la colaboración en el proceso de elicitación al cual el experto accedio sin problema alguno.
+A este experto el facilitador previamente tenía conocimiento sobre él y sobre la expeticie que tiene en el tema ya que conoce que lleva más de 7 años en el campo, por lo tanto, el facilitador lo contacto por redes sociales y le pidió amablemente la colaboración en el proceso de elicitación al cual el experto accedió sin problema alguno.
 
-El proceso de elicitación se le realizo a este experto via **meet** el cual previamente se le explico al experto todas las pautas que debia tener en cuenta a la hora de realizar cada una de las elicitaciones, se le dio información que lo ayudara a guiarse más en su proceso de estimación y se entablo en aproximadamente una hora una conversación que le permitio al experto realizar estimaciones a las tres preguntas planteadas de acuerdo a sus pensamientos y conocimientos del tema, cuando este ya se sentia preparado, se procedio a empezar los procesos de elicitaciones los cuales fueron grabados y pueden ser visualizados a continuación:
+El proceso de elicitación se le realizo a este experto vía **meet** el cual previamente se le explico al experto todas las pautas que debía tener en cuenta a la hora de realizar cada una de las elicitaciones, se le dio información que lo ayudara a guiarse más en su proceso de estimación y se entablo en aproximadamente una hora una conversación que le permitió al experto realizar estimaciones a las tres preguntas planteadas de acuerdo a sus pensamientos y conocimientos del tema, cuando este ya se sentía preparado, se procedió a empezar los procesos de elicitaciones los cuales fueron grabados y pueden ser visualizados a continuación:
 
 
-El link para visualizar el video lo pueden encontrar aqui... [Proceso de Elicitación Experto 2](https://youtu.be/dGDup7Vrg9s)
+El link para visualizar el video lo pueden encontrar aquí... [Proceso de Elicitación Experto 2](https://youtu.be/dGDup7Vrg9s)
 
 <div>
 <p style = 'text-align:center;'>
@@ -422,7 +419,7 @@ El link para visualizar el video lo pueden encontrar aqui... [Proceso de Elicita
 
 **Resumen de la elicitación**
 
-A la hora de hacerle esta pregunta del número de peluqueros en la ciudad de Medellín este experto se encontraba muy pensativo dado que nunca habia pensado en esto y consideraba que la cantidad era tan grande que no se lo alcanza a imaginar, empezo a establecer cifras demasiado grandes que parecian un poco exageradas, a medida que continuaba pensando las acomoda un poco mejor las cifras considerando valores muy grandes pero no exagerados, el se sentia muy seguro de lo que decia y no estaba de acuerdo con bajar su estimación y en varios ocasiones afirmo que el gremio de barberos, peluqueros y estilistas habia crecido demasiado en los últimos años, hasta considerar que parecia una moda, dado que cuando empezo en este sector decia que no era tan común ver muchas personas que lo ejercieran pero que al pasar de los años tuvo la oportunidad de ver como muchas personas empezaban a emplearse en este sector y además la cantidad de locales que en los últimos años se montaron, cuestión que lo impresionaba y lo llevaba a pensar en lo popular que se volvio el oficio y que a la vez lo motivo a seguir en el sector.
+A la hora de hacerle esta pregunta del número de peluqueros en la ciudad de Medellín este experto se encontraba muy pensativo dado que nunca había pensado en esto y consideraba que la cantidad era tan grande que no se lo alcanza a imaginar, empezó a establecer cifras demasiado grandes que parecen un poco exageradas, a medida que continuaba pensando las acomoda un poco mejor las cifras considerando valores muy grandes pero no exagerados, él se sentía muy seguro de lo que decía y no estaba de acuerdo con bajar su estimación y en varios ocasiones afirmo que el gremio de barberos, peluqueros y estilistas había crecido demasiado en los últimos años, hasta considerar que parecía una moda, dado que cuando empezó en este sector decía que no era tan común ver muchas personas que lo ejercieran pero que al pasar de los años tuvo la oportunidad de ver como muchas personas empezaban a emplearse en este sector y además la cantidad de locales que en los últimos años se montaron, cuestión que lo impresionaba y lo llevaba a pensar en lo popular que se volvió el oficio y que a la vez lo motivo a seguir en el sector.
 
 <br>
 
@@ -434,7 +431,7 @@ A la hora de hacerle esta pregunta del número de peluqueros en la ciudad de Med
 
 **Resumen de la elicitación**
 
-Para esta pregunta el experto penso en el número de clientes que atendia en cada uno de los locales en los cual trabajo como barbero y en cuantos clientes atiende ahora que trabaja de manera independiente, además de pensar en aquellos negocios que suelen tener muchos clientes y en los que suelen haber pocos, de tal manera que pudiera dar una buena estimación del promedio de clientes en un mes, además de esto penso en cuanto seria lo minimo que atiende cuando le va muy mal y cuanto es lo máximo que atiende cuando le va muy bien, de tal manera que pueda reducir más el rango de donde estaria el promedio de clientes en un mes a su consideración, también se sentia muy seguro de sus estimaciones ya que lleva muchos años de experiencia en como se comporta este sector.
+Para esta pregunta el experto pensó en el número de clientes que atendía en cada uno de los locales en los cual trabajo como barbero y en cuantos clientes atiende ahora que trabaja de manera independiente, además de pensar en aquellos negocios que suelen tener muchos clientes y en los que suelen haber pocos, de tal manera que pudiera dar una buena estimación del promedio de clientes en un mes, además de esto pensó en cuanto seria lo mínimo que atiende cuando le va muy mal y cuanto es lo máximo que atiende cuando le va muy bien, de tal manera que pueda reducir más el rango de donde estaría el promedio de clientes en un mes a su consideración, también se sentía muy seguro de sus estimaciones ya que lleva muchos años de experiencia en cómo se comporta este sector.
 
 
 <br>
@@ -449,7 +446,7 @@ Para esta pregunta el experto penso en el número de clientes que atendia en cad
 
 **Resumen de la elicitación**
 
-Este experto consideraba que lo más tradicional en la ciudad de Medellín es cobrar entre un poco menos de 5000 y 15000, porque en su perspectiva cobrar más de esto no es adecuado a menos que este en una zona de un estrato muy alto, o en lugares más prestigiosos como centros comerciales y que además ofrezcan servicios adicionales que los barberos de barrios de por si no ofrecen, de tal manera que valga la pena cobrar más de 15 mil, por otro lado el considera que en una muestra de 1000 es muy dificil encontrar a alguien que cobre entre 15000 y 25000 y que por otro lado entre 25000 y 30000 deberian estar aquellos que cumplen las condiciones antes descritas, siendo un caso mucho más particular y costoso los que cobran entre 45000 y 47500.
+Este experto consideraba que lo más tradicional en la ciudad de Medellín es cobrar entre un poco menos de 5000 y 15000, porque en su perspectiva cobrar más de esto no es adecuado a menos que este en una zona de un estrato muy alto, o en lugares más prestigiosos como centros comerciales y que además ofrezcan servicios adicionales que los barberos de barrios de por si no ofrecen, de tal manera que valga la pena cobrar más de 15 mil, por otro lado el considera que en una muestra de 1000 es muy difícil encontrar a alguien que cobre entre 15000 y 25000 y que por otro lado entre 25000 y 30000 deberían estar aquellos que cumplen las condiciones antes descritas, siendo un caso mucho más particular y costoso los que cobran entre 45000 y 47500.
 
 <br>
 
@@ -458,12 +455,12 @@ Este experto consideraba que lo más tradicional en la ciudad de Medellín es co
 Facilitador 2: Juan Esteban Sanchez Pulgarin 
 
 
-Dado que el facilitador actualmente se encuentra viviendo en Amaga el cual no pertenece a la ciudad de Medellín y los expertos deben ser de Medellín este facilitador procede a buscar via internet expertos en el area de tal manera que logra tener el telefono de varios y pedir a cada uno de ellos colaboración en el proceso de elicitación hasta que uno de ellos quiera hacerlo, el facilitador logra entablar una conversación con un experto que es barbero/peluquero del barrio 12 de octubre el cual accede a dar su colaboración a cambio del pago de 15.000 pesos colombianos y el facilitador accede y plantean un dia y hora puntual para hacer el proceso de elicitación.
+Dado que el facilitador actualmente se encuentra viviendo en Amaga el cual no pertenece a la ciudad de Medellín y los expertos deben ser de Medellín este facilitador procede a buscar vía internet expertos en el área de tal manera que logra tener el teléfono de varios y pedir a cada uno de ellos colaboración en el proceso de elicitación hasta que uno de ellos quiera hacerlo, el facilitador logra entablar una conversación con un experto que es barbero/peluquero del barrio 12 de octubre el cual accede a dar su colaboración a cambio del pago de 15.000 pesos colombianos y el facilitador accede y plantean un día y hora puntual para hacer el proceso de elicitación.
 
-El proceso de elicitación se le realizo a este experto via **meet** el cual previamente se le explico al experto todas las pautas que debia tener en cuenta a la hora de realizar cada una de las elicitaciones, se le dio información que lo ayudara a guiarse más en su proceso de estimación y se entablo en aproximadamente una hora una conversación que le permitio al experto realizar estimaciones a las tres preguntas planteadas de acuerdo a sus pensamientos y conocimientos del tema, cuando este ya se sentia preparado, se procedio a empezar los procesos de elicitaciones los cuales fueron grabados y pueden ser visualizados a continuación:
+El proceso de elicitación se le realizo a este experto vía **meet** el cual previamente se le explico al experto todas las pautas que debía tener en cuenta a la hora de realizar cada una de las elicitaciones, se le dio información que lo ayudara a guiarse más en su proceso de estimación y se entablo en aproximadamente una hora una conversación que le permitió al experto realizar estimaciones a las tres preguntas planteadas de acuerdo a sus pensamientos y conocimientos del tema, cuando este ya se sentía preparado, se procedió a empezar los procesos de elicitaciones los cuales fueron grabados y pueden ser visualizados a continuación:
 
 
-El link para visualizar el video lo pueden encontrar aqui...[Proceso de Elicitación Experto 3](https://youtu.be/7F7dogemeyk)
+El link para visualizar el video lo pueden encontrar aquí...[Proceso de Elicitación Experto 3](https://youtu.be/7F7dogemeyk)
 
 <div>
 <p style = 'text-align:center;'>
@@ -482,7 +479,7 @@ El link para visualizar el video lo pueden encontrar aqui...[Proceso de Elicitac
 
 **Resumen de la elicitación**
 
-Cuando se realizó la elicitación del número de barberos, el experto consideraba que había una buena cantidad de barberos, ya que el gremio ha crecido mucho, y hay gran variedad de cursos y escuelas que enseñan de manera fácil esta profesión; él menciona que anteriormente era común ver solo peluquerías, hoy en día se puede encontrar una gran cantidad de locales de barbería y otros que prestan sus servicios a domiciolio; inicialmente su máximo valor fue de diez mil barberos/peluqueros/estilistas en Medellín y considera que eso es suficiente para satisfacer la demanda y está abierto a que seguirá creciendo el número de barberos o que incluso hay más barberos.
+Cuando se realizó la elicitación del número de barberos, el experto consideraba que había una buena cantidad de barberos, ya que el gremio ha crecido mucho, y hay gran variedad de cursos y escuelas que enseñan de manera fácil esta profesión; él menciona que anteriormente era común ver solo peluquerías, hoy en día se puede encontrar una gran cantidad de locales de barbería y otros que prestan sus servicios a domicilió; inicialmente su máximo valor fue de diez mil barberos/peluqueros/estilistas en Medellín y considera que eso es suficiente para satisfacer la demanda y está abierto a que seguirá creciendo el número de barberos o que incluso hay más barberos.
 
 
 <br>
@@ -509,18 +506,18 @@ Para elicitar el número de servicios el experto consideraba que era imposible q
 
 **Resumen de la elicitación**
 
-Cuando se le preguntó al experto 3 por el ingreso promedio por servicio, se le pidió que imaginara una muestra de 1000 barberos que incluían a todo tipo de barberos/peluqueros/estilistas; él mencionó conocer algunos que trabajan en centros comerciales y otros que trabajan en barrios más populares, pero que generalmente hay un precio base para los servicios prestados, sin embargo, es consiente de que hay algunos que cobran bastante más costosos, aunque, no son mayoría y corresponden a barberos que trabajan en zonas más exclusivas de ciudad; por lo que pensando en la mayoría, asigna 300 barberos que cobrarían entre 12501 y 15000, por lo que en un servicio generalmente se realizan varias cosas, además de un corte.
+Cuando se le preguntó al experto 3 por el ingreso promedio por servicio, se le pidió que imaginara una muestra de 1000 barberos que incluían a todo tipo de barberos/peluqueros/estilistas; él mencionó conocer algunos que trabajan en centros comerciales y otros que trabajan en barrios más populares, pero que generalmente hay un precio base para los servicios prestados, sin embargo, es consciente de que hay algunos que cobran bastante más costosos, aunque, no son mayoría y corresponden a barberos que trabajan en zonas más exclusivas de ciudad; por lo que pensando en la mayoría, asigna 300 barberos que cobrarían entre 12501 y 15000, por lo que en un servicio generalmente se realizan varias cosas, además de un corte.
 
 
 <br>
 
-**Conclusión:**
+**Conclusión: **
 
-Los tres expertos se sentian muy motivados por lo que ejercen, es algo que de verdad quieren seguir haciendo y los tres lo describen como un arte, del cual aprenden cada dia cosas nuevas y además a su consideración es algo que nunca va a decaer, ya que a los hombres siempre les va a seguir creciendo el cabello y ahi van a estar ellos siempre para ayudar, por lo tanto es un sector que va a seguir teniendo gran influencia y va a aportar a la economia.
+Los tres expertos se sentían muy motivados por lo que ejercen, es algo que de verdad quieren seguir haciendo y los tres lo describen como un arte, del cual aprenden cada día cosas nuevas y además a su consideración es algo que nunca va a decaer, ya que a los hombres siempre les va a seguir creciendo el cabello y ahí van a estar ellos siempre para ayudar, por lo tanto, es un sector que va a seguir teniendo gran influencia y va a aportar a la economía.
 
 ## Cambios de opinión
 
-Al cabo de unos dias se le hablo a cada uno de los expertos y se les pregunto si habian cambiado de opinión respecto a las estimaciones que hicieron en cada una de las elicitaciones:
+Al cabo de unos días se le hablo a cada uno de los expertos y se les pregunto si habían cambiado de opinión respecto a las estimaciones que hicieron en cada una de las elicitaciones:
 
 **Experto 1.**
 
@@ -528,7 +525,7 @@ Al cabo de unos dias se le hablo a cada uno de los expertos y se les pregunto si
 ![](Chat_experto1.jpeg){width=25% height=40%}
 </center>
 
-Como se puede ver en la conversación que se entablo con el Experto 1 este sigue firme con sus opiniones sobre cada una de las estimaciones que realizo sobre las tres variables estudiadas, por lo tanto las elicitaciones son las mismas descritas previamente.
+Como se puede ver en la conversación que se entablo con el Experto 1 este sigue firme con sus opiniones sobre cada una de las estimaciones que realizo sobre las tres variables estudiadas, por lo tanto, las elicitaciones son las mismas descritas previamente.
 
 
 
@@ -539,7 +536,7 @@ Como se puede ver en la conversación que se entablo con el Experto 1 este sigue
 ![](Chat_experto2.jpeg){width=25% height=40%}
 </center>
 
-Como se puede ver en la conversación que se entablo con el Experto 2 este sigue firme con sus opiniones sobre cada una de las estimaciones que realizo sobre las tres variables estudiadas, por lo tanto las elicitaciones son las mismas descritas previamente.
+Como se puede ver en la conversación que se entablo con el Experto 2 este sigue firme con sus opiniones sobre cada una de las estimaciones que realizo sobre las tres variables estudiadas, por lo tanto, las elicitaciones son las mismas descritas previamente.
 
 <br>
 
@@ -552,7 +549,7 @@ Como se puede ver en la conversación que se entablo con el Experto 2 este sigue
 
 <br>
 
-Como se puede ver en la conversación que se entablo con el Experto 3 este sigue firme con sus opiniones sobre el número promedio de servicios y el costo promedio por servicio, pero cambia un poco de opinión sobre el número de barberos que hay en la ciudad de Medellín, con lo cual se le volvio a realizar el proceso de elicitación para esta y se muestra a continuación la nueva plantilla:
+Como se puede ver en la conversación que se entablo con el Experto 3 este sigue firme con sus opiniones sobre el número promedio de servicios y el costo promedio por servicio, pero cambia un poco de opinión sobre el número de barberos que hay en la ciudad de Medellín, con lo cual se le volvió a realizar el proceso de elicitación para esta y se muestra a continuación la nueva plantilla:
 
 
 <center>
@@ -565,7 +562,7 @@ Como se puede ver en la conversación que se entablo con el Experto 3 este sigue
 
 **Resumen de la elicitación**
 
-Cuando se realizó la elicitación del número de barberos, el experto consideraba que había una buena cantidad de barberos, ya que el gremio ha crecido mucho, y hay gran variedad de cursos y escuelas que enseñan de manera fácil esta profesión, sin embargo, inicialmente su máximo valor fue de diez mil, esto fue cambiando,  debido a que él comenzó a pensar en que debían ser más, llegando como se observa a valores entre treinta mil y cuarenta mil barberos/peluqueros/estilistas en Medellín.
+Cuando se realizó la elicitación del número de barberos, el experto consideraba que había una buena cantidad de barberos, ya que el gremio ha crecido mucho, y hay gran variedad de cursos y escuelas que enseñan de manera fácil esta profesión, sin embargo, inicialmente su máximo valor fue de diez mil, esto fue cambiando, debido a que él comenzó a pensar en que debían ser más, llegando como se observa a valores entre treinta mil y cuarenta mil barberos/peluqueros/estilistas en Medellín.
 
 
 
@@ -671,17 +668,17 @@ legend("topright",c('Experto 1','Experto 2','Experto3','Promedio'),lty=c(1,1,1,1
 col=c('orange','green','cyan4','red'))
 ```
 
-* La distribución promedio que se presenta en esta gráfica es dandole el mismo peso a los tres expertos, pero esto no es adecuado ya que ellos no tienen el mismo nivel de experiencia o experticie en el tema, por tanto mediante simulación se pretende sacar muestras con un tamaño de muestra equivalente al nivel de experticie de cada uno.
+* La distribución promedio que se presenta en esta gráfica es dándole el mismo peso a los tres expertos, pero esto no es adecuado ya que ellos no tienen el mismo nivel de experiencia o experticie en el tema, por tanto, mediante simulación se pretende sacar muestras con un tamaño de muestra equivalente al nivel de experticie de cada uno.
 
 <br>
 
-_Para todas las simulaciones que se van a realizar previamente se va a utilizar un argumento que es el número de muestras equivalentes, que es extraido mediante la siguiente tabla_
+_Para todas las simulaciones que se van a realizar previamente se va a utilizar un argumento que es el número de muestras equivalentes, que es extraído mediante la siguiente tabla_
 
 <center>
 ![](muestra_equivalente.png)
 </center>
 
-Para cada uno de los expertos se asignan cada uno de las siguiente muestras equivalente:
+Para cada uno de los expertos se asignan cada una de las siguientes muestras equivalente:
 
 * Experto 1: 7
 * Experto 2: 14
@@ -698,7 +695,7 @@ Se realizan simulaciones del número de barberos para cada uno de los expertos, 
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r, echo=FALSE}
@@ -714,7 +711,7 @@ muestra1<-sample(Num_barberos[,1],Nsim*n.seguridad1,replace=T,prob=Num_barberos$
 resumen <- summary(muestra1)
 df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra1)))
 
-kable(df, row.names = F, caption = "Resumen de la muestra del experto 1 para el numero de barberos") %>%
+kable(df, row.names = F, caption = "Resumen de la muestra del experto 1 para el número de barberos") %>%
   kable_paper("striped", full_width = F) %>%
   row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
@@ -725,7 +722,7 @@ kable(df, row.names = F, caption = "Resumen de la muestra del experto 1 para el 
 
 A este experto se le brinda un $n$ equivalente de $14$ dado que tiene buen conocimiento en el tema
 
-Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r, echo=FALSE}
 #Muestra experto 2
@@ -739,7 +736,7 @@ muestra2<-sample(Num_barberos[,1],Nsim*n.seguridad2,replace=T,prob=Num_barberos$
 resumen <- summary(muestra2)
 df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra2)))
 
-kable(df, row.names = F, caption = "Resumen de la muestra del experto 2 para el numero de barberos") %>%
+kable(df, row.names = F, caption = "Resumen de la muestra del experto 2 para el número de barberos") %>%
   kable_paper("striped", full_width = F) %>%
   row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
@@ -750,7 +747,7 @@ kable(df, row.names = F, caption = "Resumen de la muestra del experto 2 para el 
 
 A este experto se le brinda un $n$ equivalente de $9$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r, echo=FALSE}
 #Muestra experto 3
@@ -764,7 +761,7 @@ muestra3<-sample(Num_barberos[,1],Nsim*n.seguridad3,replace=T,prob=Num_barberos$
 resumen <- summary(muestra3)
 df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra3)))
 
-kable(df, row.names = F, caption = "Resumen de la muestra del experto 3 para el numero de barberos") %>%
+kable(df, row.names = F, caption = "Resumen de la muestra del experto 3 para el número de barberos") %>%
   kable_paper("striped", full_width = F) %>%
   row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
@@ -791,7 +788,7 @@ legend("topright",c('Experto 1','Experto 2','Experto3','Promedio'),lty=c(1,1,1,1
 col=c('orange','green','cyan4','red'))
 ```
 
-* De la distribución roja que es la promedio se van a sacar 1000 muestras de tamaño $n$ equivalente  que va a ser un tamaño de muestra promedio de los tamaños de muestra equivalentes que le corresponden a cada experto, es decir:
+* De la distribución roja que es la promedio se van a sacar 1000 muestras de tamaño $n$ equivalente que va a ser un tamaño de muestra promedio de los tamaños de muestra equivalentes que le corresponden a cada experto, es decir:
 
 Los $n$ equivalentes de cada experto son:
 
@@ -802,7 +799,7 @@ Los $n$ equivalentes de cada experto son:
 
 $$n=\frac{7+14+9}{3}=\frac{30}{3}=10$$
 
-Por lo tanto se van a tomar 1000 muestras de tamaño 10 de la distribución promedio del número de peluqueros en la ciudad de Medellín de tal manera que en cada una de las muestras de tamaño 10 se va a sacar la mediana que va a ayudar a obtener una nueva distribución más precisa del número real de peluqueros en la ciudad de Medellín
+Por lo tanto, se van a tomar 1000 muestras de tamaño 10 de la distribución promedio del número de peluqueros en la ciudad de Medellín de tal manera que en cada una de las muestras de tamaño 10 se va a sacar la mediana que va a ayudar a obtener una nueva distribución más precisa del número real de peluqueros en la ciudad de Medellín
 
 
 ```{r, echo=FALSE}
@@ -832,18 +829,18 @@ resumen <- summary(medias_barberos)
 desviacion <- sd(medias_barberos)
 df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = c(desviacion), Longuitud = c(length(medias_barberos)))
 
-kable(df, row.names = F, caption = "Resumen para el numero de barberos") %>%
+kable(df, row.names = F, caption = "Resumen para el  de barberos") %>%
   kable_paper("striped", full_width = F) %>%
   row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
 
 
-* Se puede notar que se empezo el análisis del número de peluqueros con un rango de 0 a 100 mil, pero mediante esta distribución promedio ya se tiene un rango más cerrado que va de 24750 y 60250 que es el rango en donde se espera que este el número real de peluqueros de la ciudad de Medellín.
+* Se puede notar que se empezó el análisis del número de peluqueros con un rango de 0 a 100 mil, pero mediante esta distribución promedio ya se tiene un rango más cerrado que va de 24750 y 60250 que es el rango en donde se espera que este el número real de peluqueros de la ciudad de Medellín.
 
-* La estimación promedio del número de barberos/peluqueros/estilistas que hay en la ciudad de Medellín es de 42430. (Esta seria la estimación puntual) 
+* La estimación promedio del número de barberos/peluqueros/estilistas que hay en la ciudad de Medellín es de 42430. (Esta sería la estimación puntual) 
 
-* Hay una dispersión de 5785.287 unidades en las estimaciones del número de barberos/peluqeros/estilistas de la ciudad de Medellín.
+* Hay una dispersión de 5785.287 unidades en las estimaciones del número de barberos/peluqueros/estilistas de la ciudad de Medellín.
 
 
 ```{r, echo=FALSE}
@@ -909,7 +906,7 @@ grid()
 
 
 
-distribución del número de servicios en un mes  para el Experto 2
+distribución del número de servicios en un mes para el Experto 2
 
 ```{r, echo=FALSE, fig.align="center"}
 plot(Num_clientes$Num_clientes, Num_clientes$Experto2, type='l',ylab='Nivel de seguridad',xlab='Cantidad de servicios en un mes', pch=19, col="green", main="Distribución del número de servicios en un mes por el Experto 2", lwd=2, xaxt="n")
@@ -919,7 +916,7 @@ grid()
 
 
 
-distribución del número de servicios en un mes  para el Experto 3
+distribución del número de servicios en un mes para el Experto 3
 
 ```{r, echo=FALSE, fig.align="center"}
 plot(Num_clientes$Num_clientes, Num_clientes$Experto3, type='l',ylab='Nivel de seguridad',xlab='Cantidad de servicios en un mes', pch=19, col="purple", main="Distribución del número de servicios en un mes por el Experto 3", xaxt="n", lwd=2)
@@ -959,7 +956,7 @@ col=c('orange','green','cyan4','red'))
 ```
 
 
-* La distribución promedio que se presenta en esta gráfica es dandole el mismo peso a los tres expertos, pero esto no es adecuado ya que ellos no tienen el mismo nivel de experiencia o experticie en el tema, por tanto mediante simulación se pretende sacar muestras con un tamaño de muestra equivalente al nivel de experticie de cada uno.
+* La distribución promedio que se presenta en esta gráfica es dándole el mismo peso a los tres expertos, pero esto no es adecuado ya que ellos no tienen el mismo nivel de experiencia o experticie en el tema, por tanto, mediante simulación se pretende sacar muestras con un tamaño de muestra equivalente al nivel de experticie de cada uno.
 
 <br>
 
@@ -973,7 +970,7 @@ Se realizan simulaciones del número de servicios promedio en un mes para cada u
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r, echo=FALSE}
@@ -998,7 +995,7 @@ kable(df, row.names = F, caption = "Resumen del experto 1 para el número de ser
 
 **Experto 2**
 
-Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r, echo=FALSE}
 #Muestra experto 2
@@ -1021,7 +1018,7 @@ kable(df, row.names = F, caption = "Resumen del experto 2 para el número de ser
 
 **Experto 3**
 
-Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r, echo=FALSE}
 #Muestra experto 1
@@ -1065,7 +1062,7 @@ col=c('orange','green','cyan4','red'))
 ```
 
 
-* De la distribución roja que es la promedio se van a sacar 1000 muestras de tamaño $n$ equivalente que va a ser un tamaño de muestra promedio de los tamaños de muestra equivalentes que le corresponden a cada experto es decir:
+* De la distribución roja que es la promedio se van a sacar 1000 muestras de tamaño $n$ equivalente que va a ser un tamaño de muestra promedio de los tamaños de muestra equivalentes que le corresponden a cada experto, es decir:
 
 Los $n$ equivalentes de cada experto son:
 
@@ -1076,7 +1073,7 @@ Los $n$ equivalentes de cada experto son:
 
 $$n=\frac{7+14+9}{3}=\frac{30}{3}=10$$
 
-Por lo tanto se van a tomar 1000 muestras de tamaño 10 de la distribución promedio del número de servicios en un mes de tal manera que en cada una de las muestras de tamaño 10 se va a sacar un promedio que va a ayudar a obtener una nueva distribución más precisa del número real de servicios en el mes de los peluqueros en la ciudad de Medellín
+Por lo tanto, se van a tomar 1000 muestras de tamaño 10 de la distribución promedio del número de servicios en un mes de tal manera que en cada una de las muestras de tamaño 10 se va a sacar un promedio que va a ayudar a obtener una nueva distribución más precisa del número real de servicios en el mes de los peluqueros en la ciudad de Medellín
 
 
 ```{r, echo=FALSE}
@@ -1112,11 +1109,11 @@ kable(df, row.names = F, caption = "Resumen para el número de servicios promedi
 ```
 
 
-* Se puede notar que se empezo el análisis del número de servicios en un mes con un rango de 0 a 1000, pero mediante esta distribución promedio ya se tiene un rango más cerrado que va de aproximadamente de 312 a 590 servicios que es el rango en donde se espera que este el número real de servicios en un mes de peluqueros de la ciudad de Medellín.
+* Se puede notar que se empezó el análisis del número de servicios en un mes con un rango de 0 a 1000, pero mediante esta distribución promedio ya se tiene un rango más cerrado que va de aproximadamente de 312 a 590 servicios que es el rango en donde se espera que este el número real de servicios en un mes de peluqueros de la ciudad de Medellín.
 
 * La estimación promedio del número de servicios que ofrecen al mes los barberos/peluqueros/estilistas en la ciudad de Medellín es de aproximadamente 449 servicios.
 
-* Hay una dispersión de 46.54462 unidades en las estimaciones del número de servicios en un mes de barberos/peluqeros/estilistas de la ciudad de Medellín.
+* Hay una dispersión de 46.54462 unidades en las estimaciones del número de servicios en un mes de barberos/peluqueros/estilistas de la ciudad de Medellín.
 
 ```{r, echo=FALSE}
 df <- data.frame(round(quantile(medias_clientes, probs = c(0.025, 0.975)))[1], round(quantile(medias_clientes, probs = c(0.025, 0.975)))[2])
@@ -1156,7 +1153,7 @@ Las plantillas de elicitación establecidas por cada uno de los expertos sobre e
 
 * Las cuales traducidas a datos se presentan en la siguiente data frame:
 
-_Datos gráfico elicitación via muestras hipoteticas del costo por servicio_
+_Datos gráfico elicitación vía muestras hipotéticas del costo por servicio_
 
 <center>
 ```{r, echo=FALSE}
@@ -1227,7 +1224,7 @@ col=c('orange','green','cyan4','red'))
 ```
 
 
-* La distribución promedio que se presenta en esta gráfica es dandole el mismo peso a los tres expertos, pero esto no es adecuado ya que ellos no tienen el mismo nivel de experiencia o experticie en el tema, por tanto mediante simulación se pretende sacar muestras con un tamaño de muestra equivalente al nivel de experticie de cada uno.
+* La distribución promedio que se presenta en esta gráfica es dándole el mismo peso a los tres expertos, pero esto no es adecuado ya que ellos no tienen el mismo nivel de experiencia o experticie en el tema, por tanto mediante simulación se pretende sacar muestras con un tamaño de muestra equivalente al nivel de experticie de cada uno.
 
 <br>
 
@@ -1241,7 +1238,7 @@ Se realizan simulaciones del costo por servicio promedio en un mes para cada uno
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r, echo=FALSE}
@@ -1268,7 +1265,7 @@ kable(df, row.names = F, caption = "Resumen del experto 1 para el costo promedio
 
 A este experto se le brinda un $n$ equivalente de $14$ dado que tiene buen conocimiento en el tema
 
-Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r, echo=FALSE}
@@ -1294,7 +1291,7 @@ kable(df, row.names = F, caption = "Resumen del experto 2 para el costo promedio
 
 A este experto se le brinda un $n$ equivalente de $9$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r, echo=FALSE}
 # Muestra experto 3
@@ -1336,7 +1333,7 @@ legend("topright",c('Experto 1','Experto 2','Experto3','Promedio'),lty=c(1,1,1,1
 col=c('orange','green','cyan4','red'))
 ```
 
-* De la distribución roja que es la promedio se van a sacar 1000 muestras de tamaño $n$ equivalente que va a ser un tamaño de muestra promedio de los tamaños de muestra equivalentes que le corresponden a cada experto es decir:
+* De la distribución roja que es la promedio se van a sacar 1000 muestras de tamaño $n$ equivalente que va a ser un tamaño de muestra promedio de los tamaños de muestra equivalentes que le corresponden a cada experto, es decir:
 
 Los $n$ equivalentes de cada experto son:
 
@@ -1347,7 +1344,7 @@ Experto 3: $9$
 
 $$n=\frac{7+14+9}{3}=\frac{30}{3}=10$$
 
-Por lo tanto se van a tomar 1000 muestras de tamaño 10 de la distribución promedio del costo por servicio de tal manera que en cada una de las muestras de tamaño 10 se va a sacar un promedio que va a ayudar a obtener una nueva distribución más precisa del número real del costo del servicio de los peluqueros en la ciudad de Medellín
+Por lo tanto, se van a tomar 1000 muestras de tamaño 10 de la distribución promedio del costo por servicio de tal manera que en cada una de las muestras de tamaño 10 se va a sacar un promedio que va a ayudar a obtener una nueva distribución más precisa del número real del costo del servicio de los peluqueros en la ciudad de Medellín
 
 
 ```{r, echo=FALSE}
@@ -1384,11 +1381,11 @@ kable(df, row.names = F, caption = "Resumen para el costo promedio por servicio"
 ```
 
 
-* Se puede notar que se empezo el análisis del costo por servicio con un rango de 0 a 50 mil, pero mediante esta distribución promedio ya se tiene un rango más cerrado que va de aproximadamente de 6550 a 20700 (costo por servicio) que es el rango en donde se espera que este el número real del costo por servicio de peluqueros de la ciudad de Medellín.
+* Se puede notar que se empezó el análisis del costo por servicio con un rango de 0 a 50 mil, pero mediante esta distribución promedio ya se tiene un rango más cerrado que va de aproximadamente de 6550 a 20700 (costo por servicio) que es el rango en donde se espera que este el número real del costo por servicio de peluqueros de la ciudad de Medellín.
 
 * El costo promedio por servicio de los barberos/peluqueros/estilistas de la ciudad de Medellín es de 12189 que aproximadamente 12'200 pesos colombianos.
 
-* Hay una dispersión de 2052.128 unidades en las estimaciones del costo promedio por servicio de barberos/peluqeros/estilistas de la ciudad de Medellín.
+* Hay una dispersión de 2052.128 unidades en las estimaciones del costo promedio por servicio de barberos/peluqueros/estilistas de la ciudad de Medellín.
 
 
 ```{r, echo=FALSE}
@@ -1408,7 +1405,7 @@ kable(df, row.names = F, caption = "Intervalo de probabilidad para el costo prom
 
 <hr>
 
-# Estimación de la variable de intéres
+# Estimación de la variable de interés
 
 **Ahora se va a realizar la estimación de la variable que era el verdadero interés de este estudio**
 
@@ -1418,7 +1415,7 @@ El Ingreso total generado por el sector es una variable aleatoria con una distri
 
 $$Ingreso~Total=Nro. Peluqueros \times Nro. Servicios \times Precio~Promedio~por~Servicio$$
 
-Por lo tanto para el calculo de la distribución del ingreso total se aplicará la siguiente estrategia:
+Por lo tanto, para el cálculo de la distribución del ingreso total se aplicará la siguiente estrategia:
 
 
 1. Se extrae de manera aleatoria un valor de la distribución del Número de peluqueros
@@ -1433,7 +1430,7 @@ Por lo tanto para el calculo de la distribución del ingreso total se aplicará 
 
 ## Calculando la distribución del ingreso total en un mes del sector
 
-Se toma una muestra de tamaño 1000 para el ingreso total por sector, que es calculado como el producto de las tres muestra extraidas para cada una de las otras variable (Número peluqueros, Número de servicios, Costo por servicio)
+Se toma una muestra de tamaño 1000 para el ingreso total por sector, que es calculado como el producto de las tres muestras extraídas para cada una de las otras variable (Número peluqueros, Número de servicios, Costo por servicio)
 
 ```{r, echo=F}
 set.seed(23)
@@ -1455,6 +1452,7 @@ Ingresos_sector <- Numero_barberos*Numero_clientes*Precio_servicio
 hist(Ingresos_sector,xlab='Ingresos', ylab='Densidad', main='Histograma del Ingreso total del sector de peluqueros', col="cyan3", freq = FALSE)
 #axis(1, at=seq(min(Ingresos_sector), max(Ingresos_sector), by=82170312500), las=2)
 lines(density(Ingresos_sector, from=0), lwd=1.5)
+grid()
 ```
 
 
@@ -1468,7 +1466,7 @@ kable(df, row.names = F, caption = "Resumen para los ingresos del sector") %>%
   row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
-* En promedio el ingreso del sector de barberos/peluqueros/estilistas/ en un mes es de 236.300.000.000 (docientos treinta y seis mil trecientos millones) pesos colombianos.
+* En promedio el ingreso del sector de barberos/peluqueros/estilistas/ en un mes es de 236.300.000.000 (doscientos treinta y seis mil trecientos millones) pesos colombianos.
 
 
 ## Intervalo de probabilidad 
@@ -1476,14 +1474,14 @@ kable(df, row.names = F, caption = "Resumen para los ingresos del sector") %>%
 ```{r, echo=F}
 df <- data.frame(quantile(Ingresos_sector, probs = c(0.025, 0.975))[1], quantile(Ingresos_sector, probs = c(0.025, 0.975))[2])
 
-colnames(df) <- c("Limite inferior 2.5%", "Limite superior 97.5%")
+colnames(df) <- c("Límite inferior 2.5%", "Límite superior 97.5%")
 
 kable(df, row.names = F, caption = "Intervalo de probabilidad para el ingreso total del sector por mes") %>%
   kable_paper("striped", full_width = F) %>%
   row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
-* Con una probabilidad del 95% el valor del ingreso del sector debarberos/peluqueros/estilistas/ en un mes esta entre **146.242.753.125** y **359.115.000.000** pesos colombianos.
+* Con una probabilidad del 95% el valor del ingreso del sector de barberos/peluqueros/estilistas/ en un mes esta entre **146.242.753.125** y **359.115.000.000** pesos colombianos.
 
 
 <br>
@@ -1610,7 +1608,7 @@ grid()
 
 <br>
  
-**Calculando la distribucón promedio**
+**Calculando la distribución promedio**
 
 ```{r, fig.align='center'}
 promedio_barberos <- rowMeans(data.frame(Num_barberos$Experto1, Num_barberos$Experto2, Num_barberos$Experto3))
@@ -1650,7 +1648,7 @@ col=c('orange','green','cyan4','red'))
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r}
@@ -1667,7 +1665,7 @@ muestra1<-sample(Num_barberos[,1],Nsim*n.seguridad1,replace=T,prob=Num_barberos$
 
 A este experto se le brinda un $n$ equivalente de $14$ dado que tiene buen conocimiento en el tema
 
-Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r}
 #Muestra experto 2
@@ -1683,7 +1681,7 @@ muestra2<-sample(Num_barberos[,1],Nsim*n.seguridad2,replace=T,prob=Num_barberos$
 
 A este experto se le brinda un $n$ equivalente de $9$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r}
 #Muestra experto 3
@@ -1718,7 +1716,7 @@ col=c('orange','green','cyan4','red'))
 
 <br>
 
-**Simulacción de las 1000 muestras de tamaño 10 extraidad de la distribución promedio del número de peluqueros**
+**Simulación de las 1000 muestras de tamaño 10 extraída de la distribución promedio del número de peluqueros**
 
 ```{r}
 set.seed(23)
@@ -1790,7 +1788,7 @@ grid()
 
 
 
-**distribución del número de servicios en un mes  para el Experto 2**
+**distribución del número de servicios en un mes para el Experto 2**
 
 ```{r fig.align="center"}
 plot(Num_clientes$Num_clientes, Num_clientes$Experto2, type='l',ylab='Nivel de seguridad',xlab='Cantidad de servicios en un mes', pch=19, col="green", main="Distribución del número de servicios en un mes por el Experto 2", lwd=2, xaxt="n")
@@ -1800,7 +1798,7 @@ grid()
 
 
 
-**distribución del número de servicios en un mes  para el Experto 3**
+**distribución del número de servicios en un mes para el Experto 3**
 
 ```{r, fig.align="center"}
 plot(Num_clientes$Num_clientes, Num_clientes$Experto3, type='l',ylab='Nivel de seguridad',xlab='Cantidad de servicios en un mes', pch=19, col="purple", main="Distribución del número de servicios en un mes por el Experto 3", xaxt="n", lwd=2)
@@ -1810,7 +1808,7 @@ grid()
 
 <br>
 
-**Calculando la distribucón promedio**
+**Calculando la distribución promedio**
 
 ```{r, fig.align="center"}
 promedio_clientes <- rowMeans(data.frame(Num_clientes$Experto1, Num_clientes$Experto2, Num_clientes$Experto3))
@@ -1850,7 +1848,7 @@ col=c('orange','green','cyan4','red'))
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r}
@@ -1865,7 +1863,7 @@ muestra1<-sample(Num_clientes[,1],Nsim*n.seguridad1,replace=T,prob=Num_clientes$
 
 **Experto 2**
 
-Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r}
 #Muestra experto 2
@@ -1879,7 +1877,7 @@ muestra2<-sample(Num_clientes[,1],Nsim*n.seguridad2,replace=T,prob=Num_clientes$
 
 **Experto 3**
 
-Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r}
 #Muestra experto 1
@@ -1915,7 +1913,7 @@ col=c('orange','green','cyan4','red'))
 
 <br>
 
-**Simulacción de las 1000 muestras de tamaño 10 extraidad de la distribución promedio del número de servicios en un mes**
+**Simulación de las 1000 muestras de tamaño 10 extraída de la distribución promedio del número de servicios en un mes**
 
 
 ```{r}
@@ -2044,7 +2042,8 @@ col=c('orange','green','cyan4','red'))
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con
+ la altura presente en la elicitación.
 
 
 ```{r}
@@ -2061,7 +2060,7 @@ muestra1<-sample(Precios$Costo,Nsim*n.seguridad1,replace=T,prob=Precios$Experto1
 
 A este experto se le brinda un $n$ equivalente de $14$ dado que tiene buen conocimiento en el tema
 
-Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r}
@@ -2078,7 +2077,7 @@ muestra2<-sample(Precios$Costo,Nsim*n.seguridad2,replace=T,prob=Precios$Experto2
 
 A este experto se le brinda un $n$ equivalente de $9$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo a la altura presente en la elicitación.
+Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r}
 # Muestra experto 3
@@ -2112,7 +2111,7 @@ col=c('orange','green','cyan4','red'))
 
 <br>
 
-**Simulacción de las 1000 muestras de tamaño 10 extraidad de la distribución promedio del costo por servicio**
+**Simulación de las 1000 muestras de tamaño 10 extraída de la distribución promedio del costo por servicio**
 
 ```{r}
 set.seed(23)
