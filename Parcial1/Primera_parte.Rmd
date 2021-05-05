@@ -11,16 +11,37 @@ output:
 ---
 
 <style>
+p{
+    text-align: justify;
+}
+
+#postamble .author {
+    font-size: 10px;
+}
+
+#postamble .date {
+    font-size: 10px;
+}
+
+#postamble {
+    color: white;
+    background: #262626;
+    border-top: solid 0px #211103;
+}
+
+#toc {
+    background-color: #262626;
+}
 
 #sidebar a:hover {
     color:#262626;
-    background-color: #4DAEA9;
+    background-color: #9F2042;
     cursor: pointer;
 }
 
-button{
-  width: 100%;
-  color:#4DAEA9;
+
+#sidebar a{
+  color: white;
 }
 
 </style>
