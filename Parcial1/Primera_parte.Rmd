@@ -1458,7 +1458,8 @@ Ingresos_sector <- Numero_barberos*Numero_clientes*Precio_servicio
 **Distribución apriori del ingreso total por mes del sector de barberos de la ciudad de Medellín**
 
 ```{r, echo=FALSE, fig.align="center"}
-hist(Ingresos_sector/1000000000,xlab='Ingreso total', ylab='Densidad', main='Distribución apriori del ingreso mensual del sector de barberias en Medellín en miles de millones', col="cyan3", freq = FALSE, cex.main=0.95)
+hist(Ingresos_sector/1000000000,xlab='Ingreso total', ylab='Densidad', main='Distribución apriori del ingreso mensual del sector de barberias  
+     en Medellín en miles de millones', col="cyan3", freq = FALSE)
 lines(density(Ingresos_sector/1000000000, from=0), lwd=1.5)
 grid()
 ```
@@ -1491,6 +1492,49 @@ kable(df, row.names = F, caption = "Intervalo de probabilidad para el ingreso to
 
 * Con una probabilidad del 95% el valor del ingreso del sector de barberos/peluqueros/estilistas/ en un mes esta entre **146.242.753.125** y **359.115.000.000** pesos colombianos.
 
+<br>
+
+## Conclusiones y Recomendaciones
+
+**Sobre el sector**
+
+* El sector de barberos, peluqueros y estilistas en Medellín tienen un gran impacto en la economía de Medellín, pero es más grande el impacto social que este crea.
+
+
+* El impacto social del sector de barberos, peluqueros y estilistas en Medellín puede deberse al bienestar psicológico que crea en sus clientes a la hora de prestarle sus servicios, pero este bienestar no es cuantificable por lo tanto se recurre a medidas cuantificables como lo es el impacto económico.
+
+
+* De manera indirecta los ingresos del sector económico de la barbería contribuyen a otros sectores de la economía en Medellín, es decir, los sectores completos generan dinámicas en el resto de la economía, como por ejemplo de los ingresos que genera un barbero dedica una parte a la adquisición de insumos, pago de servicios, manutención, etc. que benefician a otros sectores y con ello a la economía general de la ciudad de Medellín.
+
+
+* Organizaciones gubernamentales le pueden interesar bastante el impacto de este sector económico, ya que es un sector más bien informal y así aplicarlo para efectos más prácticos, como en el tema de la salubridad, saber si hay transmisión de enfermedades y si las barberías necesitan capacitaciones en el tema; conocer en qué puntos de la ciudad se concentran los barberos y que necesidades como escuelas, talleres, manejo económico pueden necesitar; generar censos de esta población para conocer mejor sus necesidades y beneficios que generan.
+
+**Sobre el proceso de elicitación**
+
+* Algo muy positivo a resaltar de este estudio es que los tres expertos generaron una gran seguridad en sus estimaciones, tuvieron unas perspectivas muy similares a pesar de que estos no se conocían, no han interactuado, fueron elaboradas en momentos distintos y además los facilitadores intentaron tener mucho control para no generar sesgos en los pensamientos que tenían los expertos, de tal manera que esta similaridad en las estimaciones no dan la idea de que pueden ser muy próximas al comportamiento real del sector.
+
+
+* El proceso de elicitación es una tarea la cual requiere una buena comunicación con los expertos, ya que estos se deben sentir cómodos con lo que se les está preguntando, deben comprender lo importante que son para la investigación y que de verdad expresen su conocimiento o perspectiva que tiene frente a lo que se está estudiando.
+
+
+* Es recomendable tener mucha paciencia en el proceso, ya que es un proceso difícil de cuantificar el tiempo que toma y además es importante repetirle a experto las ideas hasta que estas sean claras para él, es muy necesaria que el experto entienda en su totalidad todo lo que se está haciendo en el proceso de elicitación y cuál es el problema de estudio central que se está trabajando.
+
+
+* Es de suma importancia después de un tiempo prudente preguntarle al experto si sigue teniendo la misma perspectiva o la ha cambiado y hacer un registro de ello, de tal manera que las estimaciones de verdad reflejen el pensamiento y conocimiento de cada experto.
+
+
+* Es muy recomendable realizar el proceso de elicitación ficticia ya que este permite tener una preparación de cuál es la comunicación más acertada que se debe tener con el experto.
+
+
+* Una de las dificultades que se tuvo en el proceso fue la búsqueda de los expertos, que debido a la situación actual (Pandemia) en los tiempos que se emprendió esta actividad había restricciones en la movilidad en la ciudad de Medellín, lo cual no permitía que los facilitadores realizaran una búsqueda cómoda de los expertos, además que entablar una conversación con una persona desconocida para pedirle colaboración para realizar el proceso de elicitación no es una tarea fácil y requiere hacerlo mediante una comunicación asertiva.
+
+
+* El proceso de elicitación es una muy buena herramienta para sacar estimaciones de problemas de estudio que mediante otras técnicas generan gran dificultad y además de ello son costosos, porque el proceso de elicitación no requiere muchos datos y además valora a expertos en el tema, lo cual debería ser más acertado.
+
+
+* Una técnica utilizada en este estudio y que es de suma utilidad son las simulaciones ya que estos nos permitieron obtener unas buenas distribuciones dando peso respecto a la experiencia o conocimiento que cada experto tenia frente al tema.
+
+ 
 
 <br>
 <hr>
