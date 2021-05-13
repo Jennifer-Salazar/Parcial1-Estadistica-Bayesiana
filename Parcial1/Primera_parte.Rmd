@@ -327,6 +327,9 @@ Para más información consultar en el siguiente link... [ESTILISTA, BARBERO O P
 
 _Momento de elicitar a nuestros expertos_
 
+* Los resumenes que salen despúes de cada elicitación son sacados a partir de las notas que pudo obtener cada facilitador en todo el proceso.
+
+
 ## Experto 1
 
 Este fue elicitado por:
@@ -570,6 +573,8 @@ Cuando se realizó la elicitación del número de barberos, el experto considera
 
 ## Análisis de las distribuciones 
 
+* Nota: Durante todo el análisis se hará mención de la palabra barberos haciendo referencia a todo el conjunto de expertos en el cabello masculino es decir haciendo referencia a barberos, peluqueros, estilistas a la vez, se utiliza para reducir notación.
+
 **Análisis del número de barberos/peluqueros/estilistas en la ciudad de Medellín**
 
 Una aproximación de las distribuciones establecidas por cada uno de los expertos sobre el número de barberos/peluqueros/estilistas en la ciudad de Medellín se visualiza a continuación:
@@ -630,7 +635,7 @@ grid()
 **distribución del número de barberos dada por el Experto 3**
 
 ```{r, echo=FALSE, fig.align='center'}
-plot(Num_barberos$Num_barberos, Num_barberos$Experto3, type='l',ylab='Nivel de seguridas',xlab='', sub='Cantidad de Barberos/peluqeros/estilistas', pch=19, col="cyan4", main="distribución del número de barberos para el Experto 3", lwd=2, xaxt ="n")
+plot(Num_barberos$Num_barberos, Num_barberos$Experto3, type='l',ylab='Nivel de seguridas',xlab='', sub='Cantidad de Barberos/peluqeros/estilistas', pch=19, col="cyan4", main="Distribución del número de barberos para el Experto 3", lwd=2, xaxt ="n")
 axis(1, at=seq(0,100000, by=2500), las=2)
 grid()
 ```
@@ -659,7 +664,7 @@ res4<-prop.table(promedio_barberos)
 ```{r, fig.align="center", echo=FALSE}
 plot(Num_barberos$Num_barberos, res1, type='l',ylab='Densidad',xlab="",sub='Número de Barberos/peluqeros/estilistas', ylim = c(0, 0.07), pch=19, col="orange", xaxt="n")
 axis(1, at=seq(0,100000, by=2500), las=2)
-title(main='Número de expertos en cabellos masculinos en la ciudad de Medellín')
+title(main='Distribución del número de barberos para todos los expertos y el promedio')
 points(Num_barberos$Num_barberos,res2,type='l',col='green', pch=19)
 points(Num_barberos$Num_barberos,res3,type='l',col='cyan4', pch=19)
 points(Num_barberos$Num_barberos,res4,type='l',col='red', pch=19, lwd=2)
@@ -695,7 +700,7 @@ Se realizan simulaciones del número de barberos para cada uno de los expertos, 
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r, echo=FALSE}
@@ -709,7 +714,7 @@ muestra1<-sample(Num_barberos[,1],Nsim*n.seguridad1,replace=T,prob=Num_barberos$
 
 ```{r, echo=FALSE}
 resumen <- summary(muestra1)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra1)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Tamaño_muestra = c(length(muestra1)))
 
 kable(df, row.names = F, caption = "Resumen de la muestra del experto 1 para el número de barberos") %>%
   kable_paper("striped", full_width = F) %>%
@@ -722,7 +727,7 @@ kable(df, row.names = F, caption = "Resumen de la muestra del experto 1 para el 
 
 A este experto se le brinda un $n$ equivalente de $14$ dado que tiene buen conocimiento en el tema
 
-Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r, echo=FALSE}
 #Muestra experto 2
@@ -734,7 +739,7 @@ muestra2<-sample(Num_barberos[,1],Nsim*n.seguridad2,replace=T,prob=Num_barberos$
 
 ```{r, echo=FALSE}
 resumen <- summary(muestra2)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra2)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Tamaño_muestra = c(length(muestra2)))
 
 kable(df, row.names = F, caption = "Resumen de la muestra del experto 2 para el número de barberos") %>%
   kable_paper("striped", full_width = F) %>%
@@ -747,7 +752,7 @@ kable(df, row.names = F, caption = "Resumen de la muestra del experto 2 para el 
 
 A este experto se le brinda un $n$ equivalente de $9$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r, echo=FALSE}
 #Muestra experto 3
@@ -759,7 +764,7 @@ muestra3<-sample(Num_barberos[,1],Nsim*n.seguridad3,replace=T,prob=Num_barberos$
 
 ```{r, echo=FALSE}
 resumen <- summary(muestra3)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra3)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Tamaño_muestra = c(length(muestra3)))
 
 kable(df, row.names = F, caption = "Resumen de la muestra del experto 3 para el número de barberos") %>%
   kable_paper("striped", full_width = F) %>%
@@ -779,7 +784,7 @@ res4<-prop.table(table(c(muestra1,muestra2, muestra3)))
 
 ```{r, fig.align="center", echo=FALSE}
 plot(prop.table(table(muestra1)), type='l',ylab='Densidad',xlab="",sub='Número de Barberos/peluqeros/estilistas', pch=19, col="orange", ylim = c(0, 0.07), lwd = 1, las=2)
-title(main='Número de expertos en cabellos masculinos en la ciudad de Medellín')
+title(main='Distribución del número de barberos mediante simulación')
 points(prop.table(table(muestra2)),type='l',col='green', pch=19, lwd = 1)
 points(prop.table(table(muestra3)),type='l',col='cyan4', pch=19,lwd = 1)
 points(sort(unique(c(muestra1,muestra2, muestra3))),res4,type='l',col='red', pch=19, lwd = 2)
@@ -815,10 +820,10 @@ medias_barberos<-apply(matrix(
 
 <br>
 
-### Gráfica de la distribución promedio del número de peluqueros que hay en la ciudad de Medellín
+### Gráfica de la distribución apriori del número de barberos que hay en la ciudad de Medellín
 
 ```{r, echo=FALSE, fig.align="center"}
-hist(medias_barberos,xlab='', sub="Número de peluqueros", ylab='Densidad', main='Distribución promedio del número de peluqueros en Medellín', col="cyan3", freq = FALSE, xaxt="n")
+hist(medias_barberos,xlab='', sub="Número de barberos/peluqueros/estilistas", ylab='Densidad', main='Distribución apriori del número de barberos en la ciudad de Medellín', col="cyan3", freq = FALSE, xaxt="n")
 axis(1, at=seq(min(medias_barberos), max(medias_barberos), by=2500), las=2)
 lines(density(medias_barberos, from=0), lwd=1.5)
 grid()
@@ -827,7 +832,7 @@ grid()
 ```{r, echo=FALSE}
 resumen <- summary(medias_barberos)
 desviacion <- sd(medias_barberos)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = c(desviacion), Longuitud = c(length(medias_barberos)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = c(desviacion), Tamaño_muestra = c(length(medias_barberos)))
 
 kable(df, row.names = F, caption = "Resumen para el  de barberos") %>%
   kable_paper("striped", full_width = F) %>%
@@ -896,37 +901,37 @@ kable(Num_clientes, caption = "Datos de las elicitaciones sobre el número de pe
 
 ### Gráfico de las distribuciones aprioris en cada uno de los expertos y su promedio
 
-distribución del número de servicios en un mes para el Experto 1
+distribución del número de servicios promedio en un mes para el Experto 1
 
 ```{r, echo=FALSE, fig.align="center"}
-plot(Num_clientes$Num_clientes, Num_clientes$Experto1, type='l',ylab='Nivel de seguridad',xlab='Cantidad de servicios en un mes', pch=19, col="orange", main="Distribución del número de servicios en un mes por el Experto 1", xaxt="n", lwd=2)
+plot(Num_clientes$Num_clientes, Num_clientes$Experto1, type='l',ylab='Nivel de seguridad',xlab='Cantidad de servicios en un mes', pch=19, col="orange", main="Distribución del número de servicios promedio en un mes por el Experto 1", xaxt="n", lwd=2)
 axis(1, at=seq(0, 1000, 25), las=2)
 grid()
 ```
 
 
 
-distribución del número de servicios en un mes para el Experto 2
+distribución del número de servicios promedio en un mes para el Experto 2
 
 ```{r, echo=FALSE, fig.align="center"}
-plot(Num_clientes$Num_clientes, Num_clientes$Experto2, type='l',ylab='Nivel de seguridad',xlab='Cantidad de servicios en un mes', pch=19, col="green", main="Distribución del número de servicios en un mes por el Experto 2", lwd=2, xaxt="n")
+plot(Num_clientes$Num_clientes, Num_clientes$Experto2, type='l',ylab='Nivel de seguridad',xlab='Cantidad de servicios en un mes', pch=19, col="green", main="Distribución del número de servicios promedio en un mes por el Experto 2", lwd=2, xaxt="n")
 axis(1, at=seq(0, 1000, 25), las=2)
 grid()
 ```
 
 
 
-distribución del número de servicios en un mes para el Experto 3
+distribución del número de servicios promedio en un mes para el Experto 3
 
 ```{r, echo=FALSE, fig.align="center"}
-plot(Num_clientes$Num_clientes, Num_clientes$Experto3, type='l',ylab='Nivel de seguridad',xlab='Cantidad de servicios en un mes', pch=19, col="purple", main="Distribución del número de servicios en un mes por el Experto 3", xaxt="n", lwd=2)
+plot(Num_clientes$Num_clientes, Num_clientes$Experto3, type='l',ylab='Nivel de seguridad',xlab='Cantidad de servicios en un mes', pch=19, col="purple", main="Distribución del número de servicios promedio en un mes por el Experto 3", xaxt="n", lwd=2)
 axis(1, at=seq(0, 1000, 25), las=2)
 grid()
 ```
 
 <br>
 
-Distribución del número de servicios por mes en la ciudad de Medellín y su promedio
+**Distribución del número de servicios promedio por mes en la ciudad de Medellín y su promedio**
 
 ```{r, echo=FALSE, fig.align="center"}
 promedio_clientes <- rowMeans(data.frame(Num_clientes$Experto1, Num_clientes$Experto2, Num_clientes$Experto3))
@@ -944,9 +949,9 @@ res4<-prop.table(promedio_clientes)
 ```
 
 ```{r, fig.align="center", echo=FALSE}
-plot(Num_clientes$Num_clientes, res1, type='l',ylab='Densidad',xlab='Número de servicios en un mes', ylim=c(0,0.1), pch=19, col="orange", xaxt="n")
+plot(Num_clientes$Num_clientes, res1, type='l',ylab='Densidad',xlab='Número de servicios al mes', ylim=c(0,0.1), pch=19, col="orange", xaxt="n")
 axis(1, at=seq(0, 1000, 25), las=2)
-title(main='Número de servicios en un mes de especialistas en cabello masculino')
+title(main='Número de servicios en promedio que ofrece un barbero al mes')
 points(Num_clientes$Num_clientes,res2,type='l',col='green', pch=19)
 points(Num_clientes$Num_clientes,res3,type='l',col='cyan4', pch=19)
 points(Num_clientes$Num_clientes,res4,type='l',col='red', pch=19, lwd=2)
@@ -962,7 +967,7 @@ col=c('orange','green','cyan4','red'))
 
 # Simulación del número de servicios promedio al mes
 
-Se realizan simulaciones del número de servicios promedio en un mes para cada uno de los expertos, en donde se toma una muestra de tamaño $1000*n~seguridad$ donde $n~seguridad$ es el tamaño muestral equivalente a los años de experiencia que tiene en el campo cada uno de los expertos, de tal manera que se le da mayor peso al que más años de experiencia lleva en el campo, porque se espera que entre más años lleve tiene un conocimiento más acertado.
+Se realizan simulaciones del número de servicios promedio en un mes para cada uno de los expertos, en donde se toma una muestra mediante simulación de tamaño $1000*n~seguridad$ donde $n~seguridad$ es el tamaño muestral equivalente a los años de experiencia que tiene en el campo cada uno de los expertos, de tal manera que se le da mayor peso al que más años de experiencia lleva en el campo, porque se espera que entre más años lleve tiene un conocimiento más acertado.
 
 
 **Experto 1**
@@ -970,7 +975,7 @@ Se realizan simulaciones del número de servicios promedio en un mes para cada u
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r, echo=FALSE}
@@ -984,7 +989,7 @@ muestra1<-sample(Num_clientes[,1],Nsim*n.seguridad1,replace=T,prob=Num_clientes$
 
 ```{r, echo=FALSE}
 resumen <- summary(muestra1)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra1)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Tamaño_muestra = c(length(muestra1)))
 
 kable(df, row.names = F, caption = "Resumen del experto 1 para el número de servicios promedio en un mes") %>%
   kable_paper("striped", full_width = F) %>%
@@ -995,7 +1000,7 @@ kable(df, row.names = F, caption = "Resumen del experto 1 para el número de ser
 
 **Experto 2**
 
-Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r, echo=FALSE}
 #Muestra experto 2
@@ -1008,7 +1013,7 @@ muestra2<-sample(Num_clientes[,1],Nsim*n.seguridad2,replace=T,prob=Num_clientes$
 
 ```{r, echo=FALSE}
 resumen <- summary(muestra2)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra2)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Tamaño_muestra = c(length(muestra2)))
 
 kable(df, row.names = F, caption = "Resumen del experto 2 para el número de servicios promedio en un mes") %>%
   kable_paper("striped", full_width = F) %>%
@@ -1018,7 +1023,7 @@ kable(df, row.names = F, caption = "Resumen del experto 2 para el número de ser
 
 **Experto 3**
 
-Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r, echo=FALSE}
 #Muestra experto 1
@@ -1031,7 +1036,7 @@ muestra3<-sample(Num_clientes[,1],Nsim*n.seguridad3,replace=T,prob=Num_clientes$
 
 ```{r, echo=FALSE}
 resumen <- summary(muestra3)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra3)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Tamaño_muestra = c(length(muestra3)))
 
 kable(df, row.names = F, caption = "Resumen del experto 3 para el número de servicios promedio en un mes") %>%
   kable_paper("striped", full_width = F) %>%
@@ -1050,9 +1055,9 @@ res4<-prop.table(table(c(muestra1,muestra2, muestra3)))
 Distribución del número de servicios en un mes para los tres expertos y su promedio
 
 ```{r, fig.align="center", echo=FALSE}
-plot(prop.table(table(muestra1)), type='l',ylab='Densidad',xlab='Número de servicios en un mes', pch=19, col="orange", lwd = 1, xaxt="n")
+plot(prop.table(table(muestra1)), type='l',ylab='Densidad',xlab='Número de servicios al mes', pch=19, col="orange", lwd = 1, xaxt="n")
 axis(1, at=seq(0, 1000, 25), las=2)
-title(main='Número de servicios en un mes de especialistas en cabello masculino')
+title(main='Número de servicios en promedio al mes de un barbero mediante simulación')
 points(prop.table(table(muestra2)),type='l',col='green', pch=19, lwd = 1)
 points(prop.table(table(muestra3)),type='l',col='cyan4', pch=19,lwd = 1)
 points(sort(unique(c(muestra1,muestra2, muestra3))),res4,type='l',col='red', pch=19, lwd = 2)
@@ -1089,10 +1094,10 @@ medias_clientes<-apply(matrix(
 
 <br>
 
-### Gráfica de la distribución del número de servicios promedio en un mes de peluqueros en la ciudad de Medellín
+### Gráfica de la distribución apriori del número de servicios promedio en un mes de barberos en la ciudad de Medellín
 
 ```{r, echo=FALSE, fig.align="center"}
-hist(medias_clientes,xlab='', sub="Número de servicios en un mes", ylab='Densidad', main='Distribución promedio del número de servicios en un mes', col="cyan3", freq = FALSE, xaxt="n")
+hist(medias_clientes,xlab='', sub="Número de servicios en un mes", ylab='Densidad', main='Distribución apriori del número de servicios promedio en un mes', col="cyan3", freq = FALSE, xaxt="n")
 axis(1, at=seq(300, 600, by=25), las=2)
 lines(density(medias_clientes, from=0), lwd=1.5)
 grid()
@@ -1101,7 +1106,7 @@ grid()
 ```{r, echo=FALSE}
 resumen <- summary(medias_clientes)
 desviacion <- sd(medias_clientes)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = desviacion, Longuitud = c(length(medias_clientes)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = desviacion, Tamaño_muestra = c(length(medias_clientes)))
 
 kable(df, row.names = F, caption = "Resumen para el número de servicios promedio en un mes") %>%
   kable_paper("striped", full_width = F) %>%
@@ -1169,24 +1174,28 @@ kable(Precios, caption = "Datos de las elicitaciones sobre el costo por servicio
 </center>
 <br>
 
+* Nota: Dado que en el proceso de elicitación se le presentaban intervalos a los expertos en el que en cada uno acomodo frecuencias de barberos, para hacer el análisis del costo promedio por servicio se van a tener en cuenta los valores dentro del intervalo de 500 en 500 y a cada uno se le va a asignar la frecuencia respectiva del intervalo al cual pertenece, por ejemplo si el intervalo de 2501 a 5000 tenía una frecuencia de 10, a los costos de 3000, 3500, 4000, 4500 y 5000 se les da el valor de 10, esto con el fin de dar oportunidad de que en las simulaciones y demás análisis tenga en cuenta los valores dentro de cada intervalo y sea razonables con los pesos colombianos que se pueden manejar.
+
+<br>
+
 
 ### Gráfico de las distribuciones aprioris en cada uno de los expertos y su promedio
 
-Distribución del costo por servicio para el Experto 1
+Distribución del costo promedio por servicio para el Experto 1
 
 ```{r, fig.align="center", echo=FALSE}
-plot(Precios$Costo, Precios$Experto1, type = "l", col="orange", main="Distribución del costo por servicio Experto 1", ylab="Nivel de seguridad", xlab="", sub="Costos", xaxt="n", lwd=2)
+plot(Precios$Costo, Precios$Experto1, type = "l", col="orange", main="Distribución del costo promedio por servicio Experto 1", ylab="Nivel de seguridad", xlab="", sub="Costos", xaxt="n", lwd=2)
 axis(1, at=seq(0, 50000, 500), las=2)
 grid()
 ```
 
 <br>
 
-Distribución del costo por servicio para el Experto 2
+Distribución del costo promedio por servicio para el Experto 2
 
 
 ```{r, fig.align="center", echo=FALSE}
-plot(Precios$Costo, Precios$Experto2, type = "l", col="green", main="Distribución del costo por servicio Experto 2", ylab="Nivel de seguridad", xlab="", sub="Costos", xaxt="n", lwd=2)
+plot(Precios$Costo, Precios$Experto2, type = "l", col="green", main="Distribución del costo promedio por servicio Experto 2", ylab="Nivel de seguridad", xlab="", sub="Costos", xaxt="n", lwd=2)
 axis(1, at=seq(0, 50000, 500), las=2)
 grid()
 ```
@@ -1195,7 +1204,7 @@ grid()
 Distribución del costo por servicio para el Experto 3
 
 ```{r, fig.align="center", echo=FALSE}
-plot(Precios$Costo, Precios$Experto3, type = "l", col="cyan4", main="Distribución del costo por servicio Experto 3", ylab="Nivel de seguridad", xlab="", sub="Costos", xaxt="n", lwd=2)
+plot(Precios$Costo, Precios$Experto3, type = "l", col="cyan4", main="Distribución del costo promedio por servicio Experto 3", ylab="Nivel de seguridad", xlab="", sub="Costos", xaxt="n", lwd=2)
 axis(1, at=seq(0, 50000, 500), las=2)
 grid()
 ```
@@ -1209,12 +1218,12 @@ promedio_Precios <- rowMeans(res)
 
 <br>
 
-**Distribución del costo por servicio para los tres expertos y su promedio**
+**Distribución del costo promedio por servicio para cada experto y el promedio entre los expertos**
 
 ```{r, fig.align="center", echo=FALSE}
 plot(Precios$Costo, Precios$Experto1, type='l',ylab='Densidad',xlab="",sub='Costos', pch=19, col="orange", ylim = c(0, 450), xaxt="n")
 axis(1, at=seq(0, 50000, 500), las=2)
-title(main='Distribución del costo por servicio para los tres expertos y su promedio')
+title(main='Distribución del costo promedio por servicio para los expertos y su promedio')
 points(Precios$Costo,Precios$Experto2,type='l',col='green', pch=19)
 points(Precios$Costo,Precios$Experto3,type='l',col='cyan4', pch=19)
 points(Precios$Costo, promedio_Precios, col="red", pch=19, type = "l", lwd=2)
@@ -1230,7 +1239,7 @@ col=c('orange','green','cyan4','red'))
 
 # Simulación del costo por servicio promedio
 
-Se realizan simulaciones del costo por servicio promedio en un mes para cada uno de los expertos, en donde se toma una muestra de tamaño $1000*n~seguridad$ donde $n~seguridad$ es el tamaño muestral equivalente a los años de experiencia que tiene en el campo cada uno de los expertos, de tal manera que se le da mayor peso al que más años de experiencia lleva en el campo, porque se espera que entre más años lleve tiene un conocimiento más acertado.
+Se realizan simulaciones del costo por servicio promedio en un mes para cada uno de los expertos, en donde se toma una muestra mediante simulación de tamaño $1000*n~seguridad$ donde $n~seguridad$ es el tamaño muestral equivalente a los años de experiencia que tiene en el campo cada uno de los expertos, de tal manera que se le da mayor peso al que más años de experiencia lleva en el campo, porque se espera que entre más años lleve tiene un conocimiento más acertado.
 
 <br>
 
@@ -1238,7 +1247,7 @@ Se realizan simulaciones del costo por servicio promedio en un mes para cada uno
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r, echo=FALSE}
@@ -1252,7 +1261,7 @@ muestra1<-sample(Precios$Costo,Nsim*n.seguridad1,replace=T,prob=Precios$Experto1
 
 ```{r, echo=FALSE}
 resumen <- summary(muestra1)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra1)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Tamaño_muestra = c(length(muestra1)))
 
 kable(df, row.names = F, caption = "Resumen del experto 1 para el costo promedio por servicio") %>%
   kable_paper("striped", full_width = F) %>%
@@ -1265,7 +1274,7 @@ kable(df, row.names = F, caption = "Resumen del experto 1 para el costo promedio
 
 A este experto se le brinda un $n$ equivalente de $14$ dado que tiene buen conocimiento en el tema
 
-Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r, echo=FALSE}
@@ -1278,7 +1287,7 @@ muestra2<-sample(Precios$Costo,Nsim*n.seguridad2,replace=T,prob=Precios$Experto2
 
 ```{r, echo=FALSE}
 resumen <- summary(muestra2)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra2)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Tamaño_muestra = c(length(muestra2)))
 
 kable(df, row.names = F, caption = "Resumen del experto 2 para el costo promedio por servicio") %>%
   kable_paper("striped", full_width = F) %>%
@@ -1291,7 +1300,7 @@ kable(df, row.names = F, caption = "Resumen del experto 2 para el costo promedio
 
 A este experto se le brinda un $n$ equivalente de $9$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r, echo=FALSE}
 # Muestra experto 3
@@ -1303,7 +1312,7 @@ muestra3<-sample(Precios$Costo,Nsim*n.seguridad3,replace=T,prob=Precios$Experto3
 
 ```{r, echo=FALSE}
 resumen <- summary(muestra3)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Longuitud = c(length(muestra3)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Tamaño_muestra = c(length(muestra3)))
 
 kable(df, row.names = F, caption = "Resumen del experto 3 para el costo promedio por servicio") %>%
   kable_paper("striped", full_width = F) %>%
@@ -1319,12 +1328,12 @@ res4<-prop.table(table(c(muestra1,muestra2, muestra3)))
 
 
 
-Distribución del costo por servicio para los tres expertos y su promedio
+**Distribución del costo promedio por servicio para los tres expertos y su promedio**
 
 ```{r, fig.align="center", echo=FALSE}
 plot(prop.table(table(muestra1)), type='l',ylab='Densidad', xlab="",sub='Costo por servicio', pch=19, col="orange", ylim = c(0, 0.1), lwd = 1, xaxt="n")
 axis(1, at=seq(0, 50000, 500), las=2)
-title(main='Costo por servicio de barberos/peluqueros/estilistas de Medellín')
+title(main='Costo promedio por servicio de barberos mediante simulación')
 points(prop.table(table(muestra2)),type='l',col='green', pch=19, lwd = 1)
 points(prop.table(table(muestra3)),type='l',col='cyan4', pch=19,lwd = 1)
 points(sort(unique(c(muestra1,muestra2, muestra3))),res4,type='l',col='red', pch=19, lwd = 2)
@@ -1361,10 +1370,10 @@ medias_costos<-apply(matrix(
 
 <br>
 
-### Gráfica de la distribución del costo por servicio promedio de peluqueros en la ciudad de Medellín
+### Gráfica de la distribución apriori del costo promedio por servicio promedio de barberos en la ciudad de Medellín
 
 ```{r, echo=FALSE, fig.align="center"}
-hist(medias_costos,xlab='', sub="Costo", ylab='Densidad', main='Distribución promedio del costo por servicio de peluqueros', col="cyan3", freq = FALSE, xaxt="n")
+hist(medias_costos,xlab='', sub="Costo", ylab='Densidad', main='Distribución apriori del costo promedio por servicio', col="cyan3", freq = FALSE, xaxt="n")
 axis(1, at=seq(6000, 19000, by=500), las=2)
 lines(density(medias_costos, from=0), lwd=1.5)
 grid()
@@ -1373,7 +1382,7 @@ grid()
 ```{r, echo=FALSE}
 resumen <- summary(medias_costos)
 desviacion <- sd(medias_costos)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = desviacion, Longuitud = c(length(medias_costos)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = desviacion, Tamaño_muestra = c(length(medias_costos)))
 
 kable(df, row.names = F, caption = "Resumen para el costo promedio por servicio") %>%
   kable_paper("striped", full_width = F) %>%
@@ -1422,7 +1431,7 @@ Por lo tanto, para el cálculo de la distribución del ingreso total se aplicar�
 2. Se extrae de manera aleatoria un valor de la distribución del Número promedio de servicios en un mes.
 3. Se extrae de manera aleatoria un valor de la distribución del Costo promedio por servicio
 4. Se realiza el producto de las muestras sacadas en los tres pasos anteriores que será un valor muestral para el ingreso total.
-5. Se repiten los pasos anteriores muchas veces de tal manera que se obtiene una muestra grande para el ingreso total del sector y mediante esta poder elaborar la distribución (Histograma) y realizar inferencias sobre esta variable.
+5. Se repiten los pasos anteriores muchas veces de tal manera que se obtiene una muestra mediante simulación grande para el ingreso total del sector y mediante esta poder elaborar la distribución (Histograma) y realizar inferencias sobre esta variable.
 
 (la muestra para cada uno se extrae de la distribución promedio creada finalmente mediante simulación, de tal manera que esta tiene un tamaño de muestra equivalente para cada experto).
 
@@ -1430,7 +1439,7 @@ Por lo tanto, para el cálculo de la distribución del ingreso total se aplicar�
 
 ## Calculando la distribución del ingreso total en un mes del sector
 
-Se toma una muestra de tamaño 1000 para el ingreso total por sector, que es calculado como el producto de las tres muestras extraídas para cada una de las otras variable (Número peluqueros, Número de servicios, Costo por servicio)
+Se toma una muestra mediante simulación de tamaño 1000 para el ingreso total por sector, que es calculado como el producto de las tres muestras extraídas para cada una de las otras variable (Número peluqueros, Número de servicios, Costo por servicio)
 
 ```{r, echo=F}
 set.seed(23)
@@ -1446,12 +1455,11 @@ Ingresos_sector <- Numero_barberos*Numero_clientes*Precio_servicio
 
 <br>
 
-**Distribución del ingreso total por mes del sector de peluqueros de la ciudad de Medellín**
+**Distribución apriori del ingreso total por mes del sector de barberos de la ciudad de Medellín**
 
 ```{r, echo=FALSE, fig.align="center"}
-hist(Ingresos_sector,xlab='Ingresos', ylab='Densidad', main='Histograma del Ingreso total del sector de peluqueros', col="cyan3", freq = FALSE)
-#axis(1, at=seq(min(Ingresos_sector), max(Ingresos_sector), by=82170312500), las=2)
-lines(density(Ingresos_sector, from=0), lwd=1.5)
+hist(Ingresos_sector/1000000000,xlab='Ingreso total', ylab='Densidad', main='Distribución apriori del ingreso mensual del sector de barberias en Medellín en miles de millones', col="cyan3", freq = FALSE, cex.main=0.95)
+lines(density(Ingresos_sector/1000000000, from=0), lwd=1.5)
 grid()
 ```
 
@@ -1459,7 +1467,7 @@ grid()
 ```{r, echo=FALSE}
 resumen <- summary(Ingresos_sector)
 desviacion <- sd(Ingresos_sector)
-df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = desviacion, Longuitud = c(length(Ingresos_sector)))
+df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = desviacion, Tamaño_muestra = c(length(Ingresos_sector)))
 
 kable(df, row.names = F, caption = "Resumen para los ingresos del sector") %>%
   kable_paper("striped", full_width = F) %>%
@@ -1648,7 +1656,7 @@ col=c('orange','green','cyan4','red'))
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r}
@@ -1665,7 +1673,7 @@ muestra1<-sample(Num_barberos[,1],Nsim*n.seguridad1,replace=T,prob=Num_barberos$
 
 A este experto se le brinda un $n$ equivalente de $14$ dado que tiene buen conocimiento en el tema
 
-Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r}
 #Muestra experto 2
@@ -1681,7 +1689,7 @@ muestra2<-sample(Num_barberos[,1],Nsim*n.seguridad2,replace=T,prob=Num_barberos$
 
 A este experto se le brinda un $n$ equivalente de $9$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r}
 #Muestra experto 3
@@ -1848,7 +1856,7 @@ col=c('orange','green','cyan4','red'))
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r}
@@ -1863,7 +1871,7 @@ muestra1<-sample(Num_clientes[,1],Nsim*n.seguridad1,replace=T,prob=Num_clientes$
 
 **Experto 2**
 
-Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r}
 #Muestra experto 2
@@ -1877,7 +1885,7 @@ muestra2<-sample(Num_clientes[,1],Nsim*n.seguridad2,replace=T,prob=Num_clientes$
 
 **Experto 3**
 
-Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r}
 #Muestra experto 1
@@ -2042,7 +2050,7 @@ col=c('orange','green','cyan4','red'))
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con
+Se saca una muestra mediante simulación de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con
  la altura presente en la elicitación.
 
 
@@ -2060,7 +2068,7 @@ muestra1<-sample(Precios$Costo,Nsim*n.seguridad1,replace=T,prob=Precios$Experto1
 
 A este experto se le brinda un $n$ equivalente de $14$ dado que tiene buen conocimiento en el tema
 
-Se saca una muestra de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 
 ```{r}
@@ -2077,7 +2085,7 @@ muestra2<-sample(Precios$Costo,Nsim*n.seguridad2,replace=T,prob=Precios$Experto2
 
 A este experto se le brinda un $n$ equivalente de $9$ dado que tiene algo de conocimiento en el tema
 
-Se saca una muestra de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
+Se saca una muestra mediante simulación de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r}
 # Muestra experto 3
