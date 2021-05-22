@@ -5,7 +5,7 @@ author:
 - "Jennifer Salazar Galvis"
 - "Juan Esteban Sánchez Pulgarin"
 
-date: "04/05/2021"
+date: ""
 output:
   rmdformats::readthedown
 ---
@@ -1475,7 +1475,8 @@ kable(df, row.names = F, caption = "Resumen para los ingresos del sector") %>%
   row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
 
-* En promedio el ingreso del sector de barberos/peluqueros/estilistas/ en un mes es de 236.300.000.000 (doscientos treinta y seis mil trecientos millones) pesos colombianos.
+* En promedio el ingreso del sector de barberos/peluqueros/estilistas/ en un mes es de
+236.334.648.031 pesos colombianos.
 
 
 ## Intervalo de probabilidad 
