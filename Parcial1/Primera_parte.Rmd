@@ -61,7 +61,8 @@ library(kableExtra)
 <center> <h2> Introducción </h2> </center>
 
 
-El auge que ha tomado el sector de belleza masculino, en especial los negocios dedicados al corte de pelo y barba exclusivos para los hombres, a través de los últimos años ha tenido un impacto impresionante en la ciudad de Medellín, el cual ha creado de alguna manera u otra cambios culturales que la sociedad ha percibido, pero más allá de esto, ha generado un impacto económico, el cual se desconoce, y en este momento nace la inspiración de intentar estudiarlo; porque este sector tiene una influencia sobre los rincones más ricos y más pobres de la cuidad, por tanto es necesario ir más allá e intentar descubrir qué porcentaje de la economía de Medellín puede estar protagonizada por este sector, pero lo que pasa es que este tipo de estudios es muy difícil manejarlos mediante la estadística clásica, ya que para hacer estimaciones adecuadas de este campo tan amplio se deben tomar tamaños de muestra muy grandes, lo cual es algo muy costoso y requiere mucho, por ello nos apoyamos de otras herramientas como la estadística Bayesiana con la que podemos tener soluciones más factibles que nos pueden llevar a buenos resultados y son técnicas más viables las cuales valoran el conocimiento que expertos en el área tienen frente a este problema que se quiere estudiar.
+El auge que ha tomado el sector de belleza masculino, en especial los negocios dedicados al corte de pelo y barba exclusivos para los hombres, a través de los últimos años ha tenido un impacto impresionante en la ciudad de Medellín, el cual ha creado de alguna manera u otra cambios culturales que la sociedad ha percibido, pero más allá de esto, ha generado un impacto económico, el cual se desconoce, y en este momento nace la inspiración de intentar estudiarlo; porque este sector tiene una influencia sobre los rincones más ricos y más pobres de la cuidad, por tanto es necesario ir más allá e intentar descubrir qué porcentaje de la economía de Medellín puede estar protagonizada por este sector, pero lastimosamente este tipo de estudios es muy complejo manejarlos mediante la estadística clásica, ya que para hacer estimaciones adecuadas de este campo tan amplio se deben tomar tamaños de muestra muy grandes, lo cual es algo muy costoso y requiere mucho tiempo, por ello nos apoyamos de otras herramientas basadas en la estadística Bayesiana con la que podemos tener soluciones más factibles que nos pueden llevar a buenos resultados y son técnicas más viables las cuales valoran el conocimiento que expertos en el área tienen frente a este tema que se quiere estudiar.
+
 
 
 ## Marco teórico
@@ -69,13 +70,20 @@ El auge que ha tomado el sector de belleza masculino, en especial los negocios d
 Una de las principales limitaciones de la estadística clásica o frecuentista es que no permite incorporar de manera coherente en el análisis estadístico la información extra-muestral o información previa que provenga de expertos en el área disponible, ya que se apoya únicamente en datos muestrales observados y en muchas casos esta información adicional puede ser de mucha utilidad, ya que viene directamente de personas que tienen una experiencia y experticie en el tema la cual puede tener una perspectiva más acertada del fenómeno que se está estudiando.
 
 
-En la práctica, a menudo la incertidumbre o el desconocimiento sobre el tema de interés hace que la toma de decisiones sea en la mayoría de los casos muy compleja, por lo cual es común que las decisiones se apoyen en expertos que proporcionan información en forma de estimaciones de probabilidad con respecto a dichas incertidumbres. Las distribuciones de probabilidad son una de las representaciones más usadas de la incertidumbre que se tiene acerca de un tema de interés. Dichas distribuciones no son más que expresiones formales de lo que piensa o sabe un experto, por lo tanto, no es adecuado juzgarles como buenas o malas. La transformación mental de conocimiento subjetivo en una distribución de probabilidad es una tarea difícil (van Lenthe, 1993) y se deben tener en cuenta algunas técnicas para la captura de la información teniendo siempre en mente que es un proceso extremadamente delicado; En este caso puntual vamos a hacer uso de las técnicas popularmente utilizadas en la estadística Bayesiana llamadas elicitaciones(distribuciones no informativas); La literatura sobre elicitación de expertos sugiere diversos pasos críticos para llevar a cabo un buen proceso de elicitación (Jenkinson, 2005).
+En la práctica, a menudo la incertidumbre o el desconocimiento sobre el tema de interés hace que la toma de decisiones sea en la mayoría de los casos muy compleja, por lo cual es común que las decisiones se apoyen en expertos que proporcionan información en forma de estimaciones de probabilidad con respecto a dichas incertidumbres. Las distribuciones de probabilidad son una de las representaciones más usadas de la incertidumbre que se tiene acerca de un tema de interés. Dichas distribuciones no son más que expresiones formales de lo que piensa o sabe un experto, por lo tanto, no es adecuado juzgarles como buenas o malas. La transformación mental de conocimiento subjetivo en una distribución de probabilidad es una tarea difícil (van Lenthe, 1993) y se deben tener en cuenta algunas técnicas para la captura de la información teniendo siempre en mente que es un proceso extremadamente delicado; En este caso puntual vamos a hacer uso de las técnicas popularmente utilizadas en la estadística Bayesiana llamadas elicitaciones(distribuciones no informativas).
 
 El proceso de elicitación debe enfrentar un protocolo cuidadoso y profesional que le permita al analista documentar el proceso. En general, dicho protocolo no difiere mucho de los principios estándares de recolección de datos, donde se espera que el analista asegure la validez científica de sus datos. 
 
 En este estudio particular se hará uso de dos tipos de elicitaciones la cuales tienen el nombre de: Elicitación gráfica a mano alzada y elicitación vía muestras hipotéticas.
 
 Las elicitaciones como tal nos permiten hallar una distribución apriori para un parámetro el cual se está estudiando, de tal manera que mediante una distribución se pueda representar el conocimiento que tiene el experto bajo el problema de estudio.
+
+Todo el proceso de elicitación requiere la selección de los expertos, la preparación de las preguntas, el entrenamiento de los expertos, las entrevistas, el análisis, la escritura de las justificaciones, documentación, etc.
+
+
+## Metodología  
+
+Se pretende desarrollar técnicas que permitan estimar el ingreso mensual de todo el sector de barberos en la ciudad de Medellín mediante elicitaciones, con estas se pretenden estimar distintas distribuciones de parámetros (número total de peluqueros, número promedio de servicios al mes, ingreso promedio por servicio) los cuales nos llevan a estimar el parámetro de interés que es el ingreso total del sector al mes, todo el proceso para obtener las estimaciones es implementado mediante el software R.  El proceso de elicitación es planificado exhaustivamente siguiendo las pautas que el campo ha establecido como adecuadas de manera que el analista pueda llevar registro de todas estimaciones hechas por el experto y brindarle retroalimentación continua durante todo el proceso. Inicialmente se revisan los enfoques y desarrollos actuales para la cuantificación de la incertidumbre o creencias que un “experto” tiene sobre los parámetros a estudiar.  Por medio de un proceso de elicitación de ensayo se prepara a los expertos hasta que tenga un entendimiento completo de cómo se desarrolla un proceso de elicitación y para la preparación de los analistas (facilitadores) se realiza lo que se conoce como una elicitación ficticia dado que la elicitación es un proceso complejo que exige al facilitador una serie de habilidades de entrevista y una comprensión razonable del campo en el que se realice la elicitación, de tal manera que ambas partes estén lo suficientemente aptas para realizar el proceso de elicitación. Después de recolectada la información se desarrolla algoritmos para la estimación de distribuciones apriori, en las cuales se desarrollaron procedimientos como: análisis de la distribuciones de probabilidad dadas por los expertos, sacar muestras mediante simulaciones a partir de estas distribuciones teniendo en cuenta el nivel de experiencia de cada experto, finalmente obteniendo una distribución de densidad promedio(distribución apriori) para el respectivo parámetro, el cual posteriormente se le realizan intervalos de probabilidad el cual nos permite entender y estimar los distintos parámetros y  llegar a una estimación optima del parámetro de interés (ingreso del sector de barberos mensualmente a nivel de Medellín).
 
 
 ## Características del estudio
@@ -110,9 +118,18 @@ Las tres distribuciones elicitadas previamente serán las que ayudaran a la esti
 <br>
 <br>
 
+## Definición de elicitación
+
+En términos de análisis estadístico, elicitación es el proceso de formulación de los conoci-mientos de un experto sobre una afirmación o un tema en particular como una distribución de probabilidad, cuando los datos científicos no se encuentran, están dispersos o son poco informativos (Garthwaite et al., 2005). Una distribución de probabilidad elicitada es comúnmente usada como distribución a priori en el análisis bayesiano donde ésta representa las creencias iniciales acerca de los parámetros de un modelo. Es común en los procesos de elicitación la participación de una facilitador, quien ayuda al experto en la formulación de los conocimientos en forma probabilística.
+
+El objetivo de la elicitación entonces es producir una distribución apriori útil que capture la opinión del experto y la integración de sus experiencias, dado que si un “experto” puede ordenar un conjunto completo de acontecimientos en una forma coherente, entonces la opinión de ese “experto” puede ser representada por una función de probabilidad.
+
+Dado que el fin de la elicitación es representar la opinión del experto que está siendo elicitado, cualquier intento de validación deberá utilizar como datos únicamente otras declaraciones de fe por ese experto, pues el conocimiento se encuentra en la cabeza del experto, y no puede ser medido fácilmente (O’Hagan, 2005). Ahora, más allá de estas componentes, el principal criterio para validar un proceso de elicitación es el sentido práctico. Estos métodos se diferencian de otros, al no tratar de especificar que las estimaciones hechas por el experto son “correctas”. Todas las estimaciones auto consistentes o coherentes son admisibles siempre y cuando el experto sienta que correspondan con sus juicios, entonces toda vez que el método cumpla los criterios matemáticos básicos de coherencia e involucre algunas pruebas de fiabilidad, es un buen método, obviamente sin perder de vista que lo deseable en un proceso de elicitación es que sea lo más fácil posible para los expertos expresar sus creencias en términos probabilísticos, reduciendo al mismo tiempo el conocimiento que éste deba tener acerca de la teoría de probabilidad (Kadane y Wolfson, 1998).
+
+
 ### Tipos de elicitaciones a utilizar
 
-**Elicitación gráfica a mano alzada** Está basada en una gráfica que contiene expresiones verbales que miden el grado de seguridad que el experto tiene sobre un determinado valor, es decir, en el "eje x" se le plantean valores posibles que puede tomar el parámetro a estudiar y en el "eje y" se presentan expresiones verbales las cuales entre más alto generan mayor nivel de seguridad de tal manera que el experto para cada valor en el "eje x" le debe asignar una expresión verbal del "eje y" y mediante esto construir una distribución del respectivo parámetro bajo estudio.
+**Elicitación gráfica a mano alzada** Está basada en una gráfica que contiene expresiones verbales que miden el grado de incertidumbre que el experto tiene sobre un determinado valor. Es decir, en el "eje x" se le plantean valores posibles que puede tomar el parámetro a estudiar y en el "eje y" se presentan expresiones verbales las cuales entre más alto generan mayor nivel de seguridad de tal manera que el experto para cada valor en el "eje x" le debe asignar una expresión verbal del "eje y" y mediante esto construir una distribución del respectivo parámetro bajo estudio.
 
 <br>
 
@@ -143,7 +160,7 @@ kable(data.frame(Altura = c(0,5,15,20,35,50,60,75,90,95,100), Expresión = c("To
 
 #### La distribución del número promedio de servicios a clientes (pueden ser los mismos clientes varias veces) que atiende cada peluquero en un mes fue elicitada mediante elicitación gráfica a mano alzada:
 
-Los valores para el "eje x" es decir los valores que representan el número de servicios en un mes toma valores de 0 a 1000 (avanzando de a 25 de manera equiespaciada) los cuales fueron considerados después de realizar una investigación y de analizar por lo tanto se considera el valor de 0  que es donde no atienden a clientes y 1000 es un caso en donde el especialista trabaja más de 15 horas diarias, atiende en muy poco tiempo a cada uno de sus clientes y además son turnos seguidos, es decir sin tiempo de descanso, por lo que se espera que este valor sea tan alta que sea poco probable y con este se da vía a que el valor promedio de clientes este entre el rango de valores disponibles y estuvieran en los valores que los expertos pensaban y efectivamente fue un rango adecuado.
+Los valores para el "eje x", es decir los valores que representan el número de servicios en un mes toma valores de 0 a 1000 (avanzando de a 25 de manera equiespaciada) los cuales fueron considerados después de realizar una investigación y de analizar, por lo tanto se considera el valor de 0 que es donde no atienden a clientes y 1000 es un caso en donde el especialista trabaja más de 15 horas diarias, atiende en muy poco tiempo a cada uno de sus clientes y además son turnos seguidos, es decir sin tiempo de descanso, por lo que se espera que este valor sea tan alto que sea poco probable y con este se da vía a que el valor promedio de clientes este entre el rango de valores disponibles y estuvieran en los valores que los expertos pensaban y efectivamente fue un rango adecuado.
 
 Las expresiones del "Eje y" fueron consideradas por los analistas que están trabajando este estudio como las expresiones más adecuadas y fueron acomodadas a una altura que de verdad trasmitiera el nivel de seguridad correspondiente, este proceso fue realizado varias veces de tal manera que al final quedo de la manera más acertada para que cualquier persona lo asimilara correctamente.
 
@@ -170,7 +187,7 @@ kable(data.frame(Altura = c(0,5,15,20,35,50,60,75,90,95,100), Expresión = c("To
 
 Se consideró realizar este tipo de elicitación dado que para una persona natural es más difícil pensar en términos del pago promedio por servicio y mediante este tipo de elicitación va a pensar en algo que es más intuitivo que es en número de especialistas de 1000 disponibles que cobrarían por sus servicios cada uno de los precios que se le está proporcionando.
 
-Dado que en este caso se manejan pesos colombianos, se crearon 20 casillas que tienen valores de 0 pesos a 50 mil pesos, las casillas tienen intervalos de a 2500, es decir, la primera casilla tiene de "0-2500", la segunda de "2501-5000", la tercera "5001-7500" y así sucesivamente siendo la última casilla "50001-más" de tal manera que al experto se le pide que se imagine una muestra de 1000 especialistas en el cabello de hombres(peluqueros/barberos/estilistas) y que acomode en cada uno de estos precios cuantos de los 1000 cobrarían entre esos intervalos, de tal manera que cuando acomode todos, el total le sume los 1000.
+Dado que en este caso se manejan pesos colombianos, se crearon 21 casillas que tienen valores de 0 pesos a 50 mil pesos, las casillas tienen intervalos de a 2500, es decir, la primera casilla tiene de "0-2500", la segunda de "2501-5000", la tercera "5001-7500" y así sucesivamente siendo la última casilla "50001-más" de tal manera que al experto se le pide que se imagine una muestra de 1000 especialistas en el cabello de hombres(peluqueros/barberos/estilistas) y que acomode en cada uno de estos precios cuantos de los 1000 cobrarían entre esos intervalos, de tal manera que cuando acomode todos, el total le sume los 1000.
 
 
 La plantilla se presenta a continuación:
@@ -188,7 +205,7 @@ La plantilla se presenta a continuación:
 
 Para realizar estos procesos de elicitación se requieren expertos reales es decir barberos, peluqueros o estilistas, debido a que este proceso no se le debe hacer por ejemplo a un cliente ya que este puede tener un punto de vista sobre el tema sesgado a su comportamiento particular sobre este entorno y no va a tener la dimensión sobre todo el campo como lo podría tener un especialista en el tema.
 
-Para realizar las tres elicitaciones descritas anteriormente se buscan a tres expertos:
+Para realizar las tres elicitaciones descritas anteriormente se buscan a tres expertos, a continuación se presenta su información y experiencia:
 
 
 Experto 1.
@@ -210,6 +227,9 @@ Experto 3
 **Mateo Rodríguez**
 
 Barbero/peluquero del barrio 12 de octubre de 22 años de edad, es un experto que lleva aproximadamente 4 años en el campo, inicio su aprendizaje de barbería al lado de su hermano el cual tenía un local en Itagüí y actualmente tiene su propio local en el barrio 12 de octubre con el que lleva 3 años.
+
+
+Los tres expertos coinden en que mediante la barberia vieron una oportunidad de negocio en el mundo que no solo les aseguraba una fuente de ingreso, sino que les permitia desarrollar de forma apasionada un arte.
 
 
 ## Diseño y validación de preguntas
@@ -258,7 +278,7 @@ también como el proceso con el que se ajustó la distribución de probabilidad 
 <br>
 
 
-### Elicitación ficticia
+## Elicitación ficticia
 
 Teniendo en cuenta los roles descritos anteriormente se procede con una de las recomendaciones:
 
@@ -455,7 +475,7 @@ Este experto consideraba que lo más tradicional en la ciudad de Medellín es co
 
 ## Experto 3
 
-Facilitador 2: Juan Esteban Sanchez Pulgarin 
+Facilitador 2: Juan Esteban Sánchez Pulgarín 
 
 
 Dado que el facilitador actualmente se encuentra viviendo en Amaga el cual no pertenece a la ciudad de Medellín y los expertos deben ser de Medellín este facilitador procede a buscar vía internet expertos en el área de tal manera que logra tener el teléfono de varios y pedir a cada uno de ellos colaboración en el proceso de elicitación hasta que uno de ellos quiera hacerlo, el facilitador logra entablar una conversación con un experto que es barbero/peluquero del barrio 12 de octubre el cual accede a dar su colaboración a cambio del pago de 15.000 pesos colombianos y el facilitador accede y plantean un día y hora puntual para hacer el proceso de elicitación.
@@ -690,7 +710,7 @@ Para cada uno de los expertos se asignan cada una de las siguientes muestras equ
 * Experto 3: 9
 
 
-# Simulación del número de peluqueros
+# Simulación del número de barberos
 
 Se realizan simulaciones del número de barberos para cada uno de los expertos, en donde se toma una muestra de tamaño $1000*n~seguridad$ donde $n~seguridad$ es el tamaño muestral equivalente a los años de experiencia que tiene en el campo cada uno de los expertos, de tal manera que se le da mayor peso al que más años de experiencia lleva en el campo, porque se espera que entre más años lleve tiene un conocimiento más acertado.
 
@@ -780,7 +800,7 @@ res4<-prop.table(table(c(muestra1,muestra2, muestra3)))
 <br>
 
 
-**Distribución del número de barberos para los tres expertos y su promedio mediante simulación**
+**Distribución del número de barberos para los tres expertos mediante simulación y su promedio**
 
 ```{r, fig.align="center", echo=FALSE}
 plot(prop.table(table(muestra1)), type='l',ylab='Densidad',xlab="",sub='Número de Barberos/peluqeros/estilistas', pch=19, col="orange", ylim = c(0, 0.07), lwd = 1, las=2)
@@ -804,7 +824,7 @@ Los $n$ equivalentes de cada experto son:
 
 $$n=\frac{7+14+9}{3}=\frac{30}{3}=10$$
 
-Por lo tanto, se van a tomar 1000 muestras de tamaño 10 de la distribución promedio del número de peluqueros en la ciudad de Medellín de tal manera que en cada una de las muestras de tamaño 10 se va a sacar la mediana que va a ayudar a obtener una nueva distribución más precisa del número real de peluqueros en la ciudad de Medellín
+Por lo tanto, se van a tomar 1000 muestras de tamaño 10 de la distribución promedio del número de barberos en la ciudad de Medellín de tal manera que en cada una de las 1000 muestras de tamaño 10 se va a sacar el promedio que va a ayudar a obtener una nueva distribución más precisa del número real de barberos en la ciudad de Medellín el cual es presentada como una distribución de densidad, que es la distribución apriori del número de barberos de la ciudad de Medellin que es presentada a continuación:
 
 
 ```{r, echo=FALSE}
@@ -834,7 +854,7 @@ resumen <- summary(medias_barberos)
 desviacion <- sd(medias_barberos)
 df <- data.frame(Minimo = c(resumen[1]), Primer_Cuartil = c(resumen[2]), Mediana = c(resumen[3]), Media = c(resumen[4]), Tercer_Cuartil = c(resumen[5]), Maximo = c(resumen[6]), Desviacion = c(desviacion), Tamaño_muestra = c(length(medias_barberos)))
 
-kable(df, row.names = F, caption = "Resumen para el  de barberos") %>%
+kable(df, row.names = F, caption = "Resumen para el número de barberos de la ciudad de Medellín") %>%
   kable_paper("striped", full_width = F) %>%
   row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
@@ -853,7 +873,7 @@ df <- data.frame(round(quantile(medias_barberos, prob=c(0.025, 0.975)))[1], roun
 
 colnames(df) <- c("Limite inferior 2.5%", "Limite superior 97.5%")
 
-kable(df, row.names = F, caption = "Intervalo de probabilidad para el número de peluqueros") %>%
+kable(df, row.names = F, caption = "Intervalo de probabilidad para el número de barberos") %>%
   kable_paper("striped", full_width = F) %>%
   row_spec(1, bold = T, color = "white", background = "#14b8b8")
 ```
@@ -931,7 +951,8 @@ grid()
 
 <br>
 
-**Distribución del número de servicios promedio por mes en la ciudad de Medellín y su promedio**
+**Distribución del número de servicios promedio por mes dado por cada experto mediante simulación y su promedio**
+
 
 ```{r, echo=FALSE, fig.align="center"}
 promedio_clientes <- rowMeans(data.frame(Num_clientes$Experto1, Num_clientes$Experto2, Num_clientes$Experto3))
@@ -971,7 +992,6 @@ Se realizan simulaciones del número de servicios promedio en un mes para cada u
 
 
 **Experto 1**
-
 
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
@@ -1078,7 +1098,7 @@ Los $n$ equivalentes de cada experto son:
 
 $$n=\frac{7+14+9}{3}=\frac{30}{3}=10$$
 
-Por lo tanto, se van a tomar 1000 muestras de tamaño 10 de la distribución promedio del número de servicios en un mes de tal manera que en cada una de las muestras de tamaño 10 se va a sacar un promedio que va a ayudar a obtener una nueva distribución más precisa del número real de servicios en el mes de los peluqueros en la ciudad de Medellín
+Por lo tanto, se van a tomar 1000 muestras de tamaño 10 de la distribución promedio del número de servicios en un mes de tal manera que en cada una de las 1000 muestras de tamaño 10 se va a sacar un promedio que va a ayudar a obtener una nueva distribución más precisa del número real de servicios en el mes de los peluqueros en la ciudad de Medellín el cual es presentada como una distribución de densidad, que es la distribución apriori del número promedio de servicios en un mes de barberos de la ciudad de Medellin que es presentada a continuación:
 
 
 ```{r, echo=FALSE}
@@ -1328,7 +1348,7 @@ res4<-prop.table(table(c(muestra1,muestra2, muestra3)))
 
 
 
-**Distribución del costo promedio por servicio para los tres expertos y su promedio**
+**Distribución del costo promedio por servicio para los tres expertos mediante simulación y su promedio**
 
 ```{r, fig.align="center", echo=FALSE}
 plot(prop.table(table(muestra1)), type='l',ylab='Densidad', xlab="",sub='Costo por servicio', pch=19, col="orange", ylim = c(0, 0.1), lwd = 1, xaxt="n")
@@ -1353,7 +1373,7 @@ Experto 3: $9$
 
 $$n=\frac{7+14+9}{3}=\frac{30}{3}=10$$
 
-Por lo tanto, se van a tomar 1000 muestras de tamaño 10 de la distribución promedio del costo por servicio de tal manera que en cada una de las muestras de tamaño 10 se va a sacar un promedio que va a ayudar a obtener una nueva distribución más precisa del número real del costo del servicio de los peluqueros en la ciudad de Medellín
+Por lo tanto, se van a tomar 1000 muestras de tamaño 10 de la distribución promedio del costo por servicio de tal manera que en cada una de las 1000 muestras de tamaño 10 se va a sacar un promedio que va a ayudar a obtener una nueva distribución más precisa del número real del costo del servicio de los barberos en la ciudad de Medellín el cual es presentada como una distribución de densidad, que es la distribución apriori del costo promedio por servicio de barberos en la ciudad de Medellín que es presentada a continuación:
 
 
 ```{r, echo=FALSE}
@@ -1427,7 +1447,7 @@ $$Ingreso~Total=Nro. Peluqueros \times Nro. Servicios \times Precio~Promedio~por
 Por lo tanto, para el cálculo de la distribución del ingreso total se aplicará la siguiente estrategia:
 
 
-1. Se extrae de manera aleatoria un valor de la distribución del Número de peluqueros
+1. Se extrae de manera aleatoria un valor de la distribución del Número de barberos
 2. Se extrae de manera aleatoria un valor de la distribución del Número promedio de servicios en un mes.
 3. Se extrae de manera aleatoria un valor de la distribución del Costo promedio por servicio
 4. Se realiza el producto de las muestras sacadas en los tres pasos anteriores que será un valor muestral para el ingreso total.
@@ -1545,13 +1565,22 @@ kable(df, row.names = F, caption = "Intervalo de probabilidad para el ingreso to
 
 * C. (2020, 10 julio). ¿Cuánto ganan los propietarios de la barbería mensualmente / anualmente? ExoNegocios. https://exonegocios.com/cuanto-ganan-los-propietarios-de-la-barberia-mensualmente-anualmente/
 
+
+
 * Flórez Rivera, A. (2014). ELICITACIÓN DE UNA DISTRIBUCIÓN SUBJETIVA DEL VECTOR DE PARÁMETROS PI DE LA DISTRIBUCIÓN MULTINOMIAL (Magister en Estadística). Universidad Nacional de Colombia.
+
+* Garthwaite P., Kadene J. y O’Hagan A., 2005, Statistical Methods for Eliciting Probability Distribu-tions,Journal of the American Statistical Association,Vol. 100, 680-700, No.470.
+
+* Kadane J., Wolfson L., 1998, Experiencies in Elicitation,The Statistician,Vol. 47, 3-19, No. 1.
 
 
 * Lora, D. (2020, 20 agosto). ESTILISTA, BARBERO O PELUQUERO, ¿CUÁL ES LA DIFERENCIA? SoyMacho.com. https://www.soymacho.com/blogs/blog/diferencia-estilista-barbero-peluquero#:%7E:text=Persona%20que%20tiene%20por%20oficio,tan%20fino%20como%20los%20estilistas
 
 * Medellín Barrios y Comunas. (s. f.). [Ilustracion]. Wikimedia. https://upload.wikimedia.org/wikipedia/commons/6/6a/Mapa_medellin_barrios_comunas_zonas_%28completo%29.svg
 
+* O’Hagan A., 2005, Research in Elicitation,University of Sheffield, UK
+
+* Van Lenthe J., 1993, A blueprint of ELI: A new method for eliciting subjective probability distributions,Behavior Research Methods, Instruments, & Computers,Vol 25, 425-433, No. 4.
 
 * Zambrano Benavides, D. (2020, 22 marzo). ¿Y qué fue de los barberos de Medellín en medio de la cuarentena? El Colombiano. https://www.elcolombiano.com/antioquia/barberos-de-medellin-le-hacen-el-corte-a-la-crisis-BO12856447
 
@@ -1898,7 +1927,6 @@ col=c('orange','green','cyan4','red'))
 
 **Experto 1**
 
-
 A este experto se le brinda un $n$ equivalente de $7$ dado que tiene algo de conocimiento en el tema
 
 Se saca una muestra mediante simulación de tamaño 7000 con reemplazo de la información suministrada por el experto 1 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
@@ -1916,6 +1944,8 @@ muestra1<-sample(Num_clientes[,1],Nsim*n.seguridad1,replace=T,prob=Num_clientes$
 
 **Experto 2**
 
+A este experto se le brinda un $n$ equivalente de $14$ dado que tiene buen conocimiento en el tema
+
 Se saca una muestra mediante simulación de tamaño 14000 con reemplazo de la información suministrada por el experto 2 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
 ```{r}
@@ -1929,6 +1959,8 @@ muestra2<-sample(Num_clientes[,1],Nsim*n.seguridad2,replace=T,prob=Num_clientes$
 <br>
 
 **Experto 3**
+
+A este experto se le brinda un $n$ equivalente de $9$ dado que tiene algo de conocimiento en el tema
 
 Se saca una muestra mediante simulación de tamaño 9000 con reemplazo de la información suministrada por el experto 3 considerando las probabilidades de cada valor de acuerdo con la altura presente en la elicitación.
 
