@@ -604,7 +604,7 @@ Una aproximación de las distribuciones establecidas por cada uno de los experto
 
 ![](Elicitaciones_densidad/Elicitacion1_experto1.jpg){width=30% height=50%}
 ![](Elicitaciones_densidad/Elicitacion1_experto2.jpg){width=30% height=50%}
-![](Elicitaciones_densidad/Elicitacion1_experto3.jpg){width=30% height=50%}
+![](Elicitaciones_densidad/Elicitacion1_experto3_2.jpg){width=27% height=40%}
 
 </center>
 
